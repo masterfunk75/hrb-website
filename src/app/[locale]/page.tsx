@@ -1,18 +1,18 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { LocaleSwitcher } from './locale-switcher';
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
-export default async function ConstructionPage({ params }: Props) {
+// Accueil — placeholder provisoire (la vraie home arrive avec le contenu + les photos).
+export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
   const t = await getTranslations('Construction');
 
   return (
-    <main className="bg-canvas text-ink flex min-h-screen flex-col items-center justify-center gap-6 px-6 text-center">
+    <section className="mx-auto flex max-w-3xl flex-col items-center gap-6 px-6 py-24 text-center sm:py-32">
       <span className="text-accent font-mono text-xs tracking-[0.2em] uppercase">
         {t('badge')}
       </span>
@@ -22,7 +22,6 @@ export default async function ConstructionPage({ params }: Props) {
       <p className="text-muted max-w-md text-base sm:text-lg">
         {t('subtitle')}
       </p>
-      <LocaleSwitcher />
-    </main>
+    </section>
   );
 }

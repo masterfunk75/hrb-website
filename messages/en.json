@@ -1,8 +1,23 @@
 {
+  "Nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "neighborhood": "Neighbourhood",
+    "business": "Business",
+    "direct": "Why book direct",
+    "book": "Check availability",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Language"
+  },
+  "Footer": {
+    "tagline": "Aparthotel in Boulogne-Billancourt. A few nights or several months.",
+    "address": "32 rue des Longs Prés, 92100 Boulogne-Billancourt",
+    "rights": "Boulogne Résidence Hôtel. All rights reserved."
+  },
   "Construction": {
     "badge": "Coming soon",
     "title": "BRH — Under construction",
-    "subtitle": "Boulogne Résidence Hôtel. Our new website is coming soon.",
-    "languageLabel": "Language"
+    "subtitle": "Boulogne Résidence Hôtel. Our new website is coming soon."
   }
 }
