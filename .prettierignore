@@ -1,0 +1,10 @@
+# Build & dépendances
+.next/
+node_modules/
+
+# Lockfile (géré par npm)
+package-lock.json
+
+# Matériel de référence (maquette handoff) — hors application
+_handoff-v2/
+brh-v2-export/
