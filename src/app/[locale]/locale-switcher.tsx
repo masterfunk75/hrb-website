@@ -11,7 +11,7 @@ export function LocaleSwitcher() {
   const activeLocale = useLocale();
 
   return (
-    <nav className="mt-2 flex items-center gap-1 rounded-full border border-[#D6CCBB] p-1">
+    <nav className="border-line-strong mt-2 flex items-center gap-1 rounded-full border p-1">
       {routing.locales.map((locale) => {
         const isActive = locale === activeLocale;
         return (
@@ -22,8 +22,8 @@ export function LocaleSwitcher() {
             aria-current={isActive ? 'true' : undefined}
             className={
               isActive
-                ? 'rounded-full bg-[#1F3A2E] px-3 py-1 text-sm font-medium text-[#FAF7F2]'
-                : 'rounded-full px-3 py-1 text-sm font-medium text-[#6B7569] transition-colors hover:text-[#1F3A2E]'
+                ? 'bg-primary text-on-emphasis rounded-full px-3 py-1 text-sm font-medium'
+                : 'text-muted hover:text-primary rounded-full px-3 py-1 text-sm font-medium transition-colors'
             }
           >
             {locale.toUpperCase()}

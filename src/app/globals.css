@@ -1,6 +1,25 @@
 @import 'tailwindcss';
 
 @theme {
+  /* Couleurs — design system V1 BRH (palette de la maquette).
+     Chaque token --color-* génère ses utilitaires Tailwind : bg-primary,
+     text-ink, border-line, etc. */
+  --color-primary: #1f3a2e; /* vert profond — couleur principale */
+  --color-primary-hover: #16291f;
+  --color-accent: #b86d4a; /* terracotta — accent */
+  --color-canvas: #faf7f2; /* crème — fond par défaut (V1 : bg-default) */
+  --color-surface: #e5ddd0; /* fond doux (V1 : bg-soft) */
+  --color-emphasis: #1f3a2e; /* fond appuyé (V1 : bg-emphasis) */
+  --color-ink: #1a1f1c; /* texte principal (V1 : text) */
+  --color-muted: #6b7569; /* texte secondaire (V1 : text-muted) */
+  --color-on-emphasis: #faf7f2; /* texte sur fond appuyé */
+  --color-line: #e5ddd0; /* bordure (V1 : border) */
+  --color-line-strong: #d6ccbb; /* bordure renforcée */
+  --color-success: #2d7a4e;
+  --color-success-soft: #e8ede5;
+  --color-error: #c13a3a;
+  --color-warning-soft: #f4e5dd;
+
   /* Typographies BRH — branchées sur next/font.
      Les variables --font-* sont posées sur <html> par le layout. */
   --font-sans: var(--font-inter), system-ui, sans-serif;
@@ -9,5 +28,7 @@
 }
 
 body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
   font-family: var(--font-sans);
 }
