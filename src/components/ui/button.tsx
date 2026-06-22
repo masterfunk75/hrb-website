@@ -20,7 +20,8 @@ type ButtonProps = {
 };
 
 // CTA stylé. href interne → Link next-intl (localisé /fr, /en) ;
-// href tel:/mailto:/http → <a> simple (liens externes non localisés).
+// href tel:/mailto:/http/#ancre → <a> simple (liens externes ou ancres in-page,
+// non localisés — un Link next-intl préfixerait à tort une ancre seule par /fr).
 export function Button({
   href,
   children,
@@ -29,7 +30,7 @@ export function Button({
 }: ButtonProps) {
   const classes = `inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${variants[variant]} ${className ?? ''}`;
 
-  if (/^(tel:|mailto:|https?:)/.test(href)) {
+  if (/^(tel:|mailto:|https?:|#)/.test(href)) {
     return (
       <a href={href} className={classes}>
         {children}
