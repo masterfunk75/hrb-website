@@ -63,5 +63,16 @@
     "direct3Title": "A real person on the line.",
     "direct3Body": "+33 1 49 10 05 45 — for groups, long stays and questions a form can't handle.",
     "directCta": "Check availability"
+  },
+  "Rooms": {
+    "heroEyebrow": "Rooms & studios",
+    "heroTitle": "Your place in Boulogne. At your own pace.",
+    "heroSubtitle": "22 rooms and studios across six floors. Comfortable rooms on the lower floors, studios with an equipped kitchenette higher up. Choose the format that fits your stay.",
+    "heroCallCta": "Call reception",
+    "overviewEyebrow": "The offer in brief",
+    "overviewTitle": "Two floors, two logics.",
+    "overviewBody1": "On the lower floors, five room categories for short stays — from the compact format to the business room with a bathtub. Higher up, three studio categories with an equipped kitchenette, for those who stay longer and prefer to dine in.",
+    "overviewBody2": "All our places share the same essentials: high-speed Wi-Fi, air conditioning, a desk, a private bathroom, a safe, a smart TV. What changes from one category to the next is the size, the bed type, and whether or not there's a kitchenette.",
+    "overviewSignature": "Book direct, and you move up a category if a higher one is free when you arrive."
   }
 }

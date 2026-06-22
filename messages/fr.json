@@ -63,5 +63,16 @@
     "direct3Title": "Un humain au bout du fil.",
     "direct3Body": "01 49 10 05 45 — pour les groupes, les longs séjours et les questions qui sortent d'un formulaire.",
     "directCta": "Voir les disponibilités"
+  },
+  "Rooms": {
+    "heroEyebrow": "Logements",
+    "heroTitle": "Vos logements à Boulogne. À votre rythme.",
+    "heroSubtitle": "22 chambres et studios sur six étages. Chambres confortables aux étages bas, studios avec kitchenette équipée aux étages hauts. Choisissez le format qui correspond à votre séjour.",
+    "heroCallCta": "Appeler la réception",
+    "overviewEyebrow": "L'offre en bref",
+    "overviewTitle": "Deux étages, deux logiques.",
+    "overviewBody1": "Aux étages bas, cinq catégories de chambres pour les courts séjours, du format compact à la chambre business avec baignoire. Aux étages hauts, trois catégories de studios avec kitchenette équipée — pour ceux qui restent plus longtemps et préfèrent dîner chez eux.",
+    "overviewBody2": "Tous nos logements partagent les mêmes essentiels : Wi-Fi haut débit, climatisation, espace bureau, salle de bain privative, coffre-fort, smart TV. Ce qui change d'une catégorie à l'autre, c'est la surface, le type de lit, et la présence ou non d'une kitchenette.",
+    "overviewSignature": "Réservez en direct, et vous montez en gamme si une catégorie supérieure est libre à votre arrivée."
   }
 }
