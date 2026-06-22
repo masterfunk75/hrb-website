@@ -24,3 +24,14 @@ export type EventCategory = {
   intro: string;
   venues: Venue[];
 };
+
+// Bonne adresse du carnet de quartier. Noms et adresses exacts en attente
+// (à confirmer par le propriétaire) → rendus via des libellés i18n « pending ».
+export type Address = {
+  id: string;
+  /** Catégorie de lieu, ex. "Boulangerie-pâtisserie". */
+  category: string;
+  pitch: string;
+  /** Légende du placeholder photo (4:3). */
+  photoLabel: string;
+};

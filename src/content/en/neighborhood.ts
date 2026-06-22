@@ -1,4 +1,4 @@
-import type { Poi, EventCategory } from '@/types/neighborhood';
+import type { Poi, EventCategory, Address } from '@/types/neighborhood';
 
 // The 12 places on the neighbourhood map (English, decimal points).
 export const poisEn: Poi[] = [
@@ -122,5 +122,44 @@ export const eventCategoriesEn: EventCategory[] = [
           'Cross the Pont de Sèvres for an unbroken walk all the way to the Île Seguin.',
       },
     ],
+  },
+];
+
+// The 5 favourite addresses (names and exact addresses to be confirmed by the owner).
+export const addressesEn: Address[] = [
+  {
+    id: 'boulangerie',
+    category: 'Bakery & patisserie',
+    pitch:
+      "Right next door. Pastries you can smell from the hallway before six, decent sandwiches to take away, and a nine-o'clock coffee that saves the morning. You finish your errands here on the way back, you start the day here when you leave early.",
+    photoLabel: 'Bakery & patisserie',
+  },
+  {
+    id: 'bistrot',
+    category: 'Lunch bistro',
+    pitch:
+      "Daily specials on the board, a set menu at a price that won't make you wince, a terrace when it's sunny. You lunch here with a client on Tuesday, you dine here as a couple on Friday without booking three days ahead.",
+    photoLabel: 'Lunch bistro',
+  },
+  {
+    id: 'restaurant',
+    category: 'Evening restaurant',
+    pitch:
+      "More refined, open late, a menu that changes. The right spot for dinner after the match or after La Seine Musicale, when you're hungry and don't fancy heading back into Paris.",
+    photoLabel: 'Evening restaurant',
+  },
+  {
+    id: 'cafe',
+    category: 'Morning café',
+    pitch:
+      "Specialty coffee for the demanding, a croissant for everyone else. Three minutes' walk, tucked into a street where people actually live. Where you surface after a night that ran longer than planned.",
+    photoLabel: 'Morning café',
+  },
+  {
+    id: 'cave',
+    category: 'Wine shop / deli',
+    pitch:
+      "A bottle for the studio, a cheese to go with it, a few words from a wine merchant who knows what he's talking about. For the evenings when you don't feel like going out.",
+    photoLabel: 'Wine shop / deli',
   },
 ];

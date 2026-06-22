@@ -93,6 +93,13 @@
     "aroundTitle": "What's on around here.",
     "aroundIntro": "Five kilometres around the hotel: a Grand Slam, a Champions League stadium, an international stage, three racecourses. Front row, on foot.",
     "mapPhoto": "Neighbourhood map — 12 places",
-    "mapCaption": "The 12 places, on foot or a few minutes away."
+    "mapCaption": "The 12 places, on foot or a few minutes away.",
+    "bandPhoto": "Full-width band — a view over the Seine or the Bois",
+    "addressesEyebrow": "The little black book",
+    "addressesTitle": "A few places we love.",
+    "addressesIntro": "Our addresses, not the guidebook's. Not the queue outside the Marais, not the table everyone photographs. The places where we eat, where we grab a coffee between meetings, where we send the people we like. Five to ten minutes on foot. Up to you.",
+    "addressNamePending": "Name to be confirmed",
+    "addressStreetPending": "Exact address to be confirmed",
+    "addressesNote": "List kept up to date. Got a good address to add? Tell us at reception."
   }
 }

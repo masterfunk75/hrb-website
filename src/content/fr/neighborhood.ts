@@ -1,4 +1,4 @@
-import type { Poi, EventCategory } from '@/types/neighborhood';
+import type { Poi, EventCategory, Address } from '@/types/neighborhood';
 
 // Les 12 lieux de la carte du quartier (distances vérifiées, source lot-2 v2).
 export const poisFr: Poi[] = [
@@ -119,5 +119,44 @@ export const eventCategoriesFr: EventCategory[] = [
           "En traversant le Pont de Sèvres, promenade continue jusqu'à l'Île Seguin.",
       },
     ],
+  },
+];
+
+// Les 5 « bonnes adresses » (noms et adresses exacts à confirmer par le propriétaire).
+export const addressesFr: Address[] = [
+  {
+    id: 'boulangerie',
+    category: 'Boulangerie-pâtisserie',
+    pitch:
+      "La porte d'à côté. Viennoiseries qui sentent depuis le couloir avant six heures, sandwichs corrects à emporter, et un café à neuf heures qui sauve la matinée. On finit ses courses ici en rentrant, on commence la journée ici quand on part tôt.",
+    photoLabel: 'Boulangerie-pâtisserie',
+  },
+  {
+    id: 'bistrot',
+    category: 'Bistrot du midi',
+    pitch:
+      'Ardoise du jour, formule à un prix qui ne fait pas grimacer, terrasse quand il fait beau. On y déjeune avec un client le mardi, on y dîne en duo le vendredi sans réserver trois jours avant.',
+    photoLabel: 'Bistrot du midi',
+  },
+  {
+    id: 'restaurant',
+    category: 'Restaurant du soir',
+    pitch:
+      "Plus travaillé, ouvert tard, carte qui change. La bonne adresse pour le dîner d'après-match ou la sortie de la Seine Musicale, quand on a faim et qu'on n'a pas envie de redescendre dans Paris.",
+    photoLabel: 'Restaurant du soir',
+  },
+  {
+    id: 'cafe',
+    category: 'Café du matin',
+    pitch:
+      "Café de spécialité pour les exigeants, croissant pour les autres. Trois minutes à pied, posé dans une rue où on vit. Là où on émerge après une nuit qui s'est étirée plus que prévu.",
+    photoLabel: 'Café du matin',
+  },
+  {
+    id: 'cave',
+    category: 'Cave / épicerie fine',
+    pitch:
+      "Une bouteille pour rentrer en studio, un fromage pour aller avec, deux mots du caviste qui sait de quoi il parle. Pour les soirs où on n'a pas envie de sortir.",
+    photoLabel: 'Cave / épicerie fine',
   },
 ];
