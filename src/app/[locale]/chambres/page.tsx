@@ -1,6 +1,8 @@
 import { setRequestLocale } from 'next-intl/server';
 import { RoomsHero } from '@/features/rooms/rooms-hero';
 import { RoomsOverview } from '@/features/rooms/rooms-overview';
+import { RoomsSummary } from '@/features/rooms/rooms-summary';
+import { RoomsCategories } from '@/features/rooms/rooms-categories';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -15,6 +17,8 @@ export default async function RoomsPage({ params }: Props) {
     <>
       <RoomsHero />
       <RoomsOverview />
+      <RoomsSummary locale={locale} />
+      <RoomsCategories locale={locale} />
     </>
   );
 }
