@@ -77,5 +77,17 @@
     "ctaTitle": "Faites votre choix.",
     "ctaSubtitle": "Le meilleur tarif est ici, garanti. Et si une catégorie supérieure est libre à votre arrivée, vous y montez.",
     "ctaAdvice": "Demander conseil"
+  },
+  "Neighborhood": {
+    "heroEyebrow": "Le quartier",
+    "heroTitle": "Paris en mieux. À quatre minutes près.",
+    "heroSubtitle": "Le métro à quatre minutes, la Tour Eiffel à vingt, le Bois en bas de la rue. Boulogne, c'est Paris quand vous le voulez, le calme quand vous en avez besoin.",
+    "heroPhoto": "Le quartier — rue de Boulogne au matin",
+    "heroAroundCta": "Ce qui se passe autour",
+    "livingEyebrow": "Au quotidien",
+    "livingTitle": "Vivre à Boulogne.",
+    "livingBody1": "Paris, mais en mieux. Boulogne, c'est l'adresse qu'on garde pour soi : métro à quatre minutes, Tour Eiffel à vingt, et tous les sièges sociaux qui comptent à portée de marche. Une ville où on respire — Bois, Seine, marchés, et cette densité de bonnes adresses qu'on trouve à Paris (souvent sans les files). À Paris quand vous le voulez. À Boulogne quand vous voulez souffler.",
+    "livingBody2": "Le matin, on prend son café à emporter et on marche jusqu'au métro. Le soir, on dîne dans une rue où personne ne prend de photo. Et puis on dort.",
+    "livingPhoto": "Vivre à Boulogne — rue résidentielle"
   }
 }

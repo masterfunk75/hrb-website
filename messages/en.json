@@ -77,5 +77,17 @@
     "ctaTitle": "Make your choice.",
     "ctaSubtitle": "The best rate is here, guaranteed. And if a higher category is free when you arrive, you move up.",
     "ctaAdvice": "Ask for advice"
+  },
+  "Neighborhood": {
+    "heroEyebrow": "The neighbourhood",
+    "heroTitle": "Paris, only better. Four minutes away.",
+    "heroSubtitle": "The metro four minutes away, the Eiffel Tower twenty, the Bois at the end of the street. Boulogne is Paris when you want it, calm when you need it.",
+    "heroPhoto": "The neighbourhood — a Boulogne street at dawn",
+    "heroAroundCta": "What's on around here",
+    "livingEyebrow": "Day to day",
+    "livingTitle": "Living in Boulogne.",
+    "livingBody1": "Paris, but better. Boulogne is the address you keep to yourself: the metro four minutes away, the Eiffel Tower twenty, and every head office that matters within walking distance. A city where you can breathe — the Bois, the Seine, markets, and that density of good addresses you find in Paris (often without the queues). Paris when you want it. Boulogne when you want to catch your breath.",
+    "livingBody2": "In the morning, you grab a coffee to go and walk to the metro. In the evening, you dine on a street where no one takes photos. And then you sleep.",
+    "livingPhoto": "Living in Boulogne — residential street"
   }
 }
