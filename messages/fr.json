@@ -18,6 +18,27 @@
   "Home": {
     "heroTitle": "Appart-hôtel à Boulogne. Pour bosser, pour Paris.",
     "heroSubtitle": "22 chambres et studios à 5 minutes du métro Marcel Sembat. Pour une nuit, une semaine ou plusieurs mois.",
-    "heroSecondaryCta": "Découvrir l'hôtel"
+    "heroSecondaryCta": "Découvrir l'hôtel",
+
+    "whyEyebrow": "Pourquoi nous",
+    "whyTitle": "Trois choses à savoir avant de réserver.",
+    "why1Title": "Vous restez le temps qu'il faut.",
+    "why1Body": "Une nuit pour Roland-Garros, trois nuits pour un déplacement client, deux mois pour une mission longue. Studios avec kitchenette équipée pour cuisiner quand vous voulez, chambres classiques pour les courts séjours. Tarifs dégressifs à partir de 3 nuits.",
+    "why2Title": "Tout Paris à portée. Et le Bois en bas de chez vous.",
+    "why2Body": "Métro Marcel Sembat (ligne 9) à 400 mètres, soit 5 minutes à pied. Tour Eiffel en 15 minutes en métro, Champs-Élysées en 20. Le Bois de Boulogne commence au coin de la rue. Vous payez Boulogne, vous vivez Paris.",
+    "why3Title": "Le stade, l'arène, le festival. Toujours à pied.",
+    "why3Body": "Roland-Garros à 1,7 km. Parc des Princes à 1,2 km. La Seine Musicale à 1,4 km. Hippodrome de Longchamp à 3 km. Vous rentrez à pied après le concert, le match, la finale — sans dépendre d'un Uber surfacturé ou d'un dernier métro raté.",
+
+    "whoEyebrow": "Pour qui ?",
+    "whoTitle": "Vous venez pour quoi ?",
+    "who1Title": "En semaine, pour le boulot.",
+    "who1Body": "Vos clients sont à Boulogne, Issy, La Défense ou dans le 16ᵉ. Vous arrivez le lundi soir, vous repartez le jeudi matin. Studio avec bureau, Wi-Fi qui tient la visio, kitchenette pour ne pas dîner au restaurant tous les soirs. Réception francophone et anglophone, facture pro mensuelle, accès 24/7.",
+    "who1Cta": "Voir les séjours pro",
+    "who2Title": "Le weekend, pour visiter Paris.",
+    "who2Body": "Vous venez de Lyon, Bordeaux, Bruxelles. Vous voulez voir Paris sans payer Paris-centre. Ligne 9 directe jusqu'à Châtelet en 25 minutes, Bois de Boulogne au coin de la rue pour le footing du dimanche, kitchenette pour le petit-déj des enfants. Restos et marché à 3 minutes — le Boulogne vivant, pas le Boulogne carte postale.",
+    "who2Cta": "Découvrir le quartier",
+    "who3Title": "Pour le tournoi, le match, le concert.",
+    "who3Body": "Roland-Garros, finale PSG, concert à la Seine Musicale, courses à Longchamp, Foire de Paris, salon Porte de Versailles. Tout est à pied ou à 10 minutes. Vous gardez la voiture au parking, vous oubliez les retours en transport bondés. Retour à pied après le coup de sifflet.",
+    "who3Cta": "Voir les événements"
   }
 }

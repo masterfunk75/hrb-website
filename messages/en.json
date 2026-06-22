@@ -18,6 +18,27 @@
   "Home": {
     "heroTitle": "An aparthotel in Boulogne. For work, for Paris.",
     "heroSubtitle": "22 rooms and studios, 5 minutes from Marcel Sembat metro. For a night, a week or several months.",
-    "heroSecondaryCta": "Discover the hotel"
+    "heroSecondaryCta": "Discover the hotel",
+
+    "whyEyebrow": "Why us",
+    "whyTitle": "Three things to know before you book.",
+    "why1Title": "Stay as long as you need.",
+    "why1Body": "One night for Roland-Garros, three for a client trip, two months for a long assignment. Studios with a fully equipped kitchenette to cook whenever you like, classic rooms for short stays. Lower rates from 3 nights.",
+    "why2Title": "All of Paris within reach. And the Bois on your doorstep.",
+    "why2Body": "Marcel Sembat metro (line 9) is 400 metres away — a 5-minute walk. The Eiffel Tower in 15 minutes by metro, the Champs-Élysées in 20. The Bois de Boulogne starts at the corner. You pay Boulogne, you live Paris.",
+    "why3Title": "The stadium, the arena, the festival. Always on foot.",
+    "why3Body": "Roland-Garros 1.7 km away. Parc des Princes 1.2 km. La Seine Musicale 1.4 km. Longchamp racecourse 3 km. Walk home after the concert, the match, the final — no overpriced ride-hailing, no last metro missed.",
+
+    "whoEyebrow": "Who it's for",
+    "whoTitle": "What brings you here?",
+    "who1Title": "On weekdays, for work.",
+    "who1Body": "Your clients are in Boulogne, Issy, La Défense or the 16th. You arrive Monday evening, leave Thursday morning. A studio with a desk, Wi-Fi that holds a video call, a kitchenette so you don't eat out every night. French- and English-speaking reception, monthly business invoicing, 24/7 access.",
+    "who1Cta": "See business stays",
+    "who2Title": "On weekends, to visit Paris.",
+    "who2Body": "You're coming from Lyon, Bordeaux, Brussels. You want to see Paris without paying central-Paris prices. Direct line 9 to Châtelet in 25 minutes, the Bois de Boulogne round the corner for the Sunday run, a kitchenette for the kids' breakfast. Restaurants and a market 3 minutes away — the living Boulogne, not the postcard one.",
+    "who2Cta": "Explore the neighbourhood",
+    "who3Title": "For the tournament, the match, the concert.",
+    "who3Body": "Roland-Garros, a PSG final, a concert at La Seine Musicale, races at Longchamp, the Foire de Paris, a show at Porte de Versailles. Everything is on foot or 10 minutes away. Leave the car parked, forget the packed transport home. Walk back after the whistle.",
+    "who3Cta": "See what's on"
   }
 }
