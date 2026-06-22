@@ -1,13 +1,15 @@
 import type { ReactNode } from 'react';
 import { Link } from '@/i18n/navigation';
 
-type Variant = 'primary' | 'outline' | 'light';
+type Variant = 'primary' | 'outline' | 'light' | 'outlineLight';
 
 const variants: Record<Variant, string> = {
   primary: 'bg-primary text-on-emphasis hover:bg-primary-hover',
   outline:
     'border border-line-strong text-ink hover:border-primary hover:text-primary',
   light: 'bg-canvas text-primary hover:bg-surface',
+  outlineLight:
+    'border border-on-emphasis/40 text-on-emphasis hover:bg-on-emphasis/10',
 };
 
 type ButtonProps = {

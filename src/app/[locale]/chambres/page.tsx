@@ -3,6 +3,7 @@ import { RoomsHero } from '@/features/rooms/rooms-hero';
 import { RoomsOverview } from '@/features/rooms/rooms-overview';
 import { RoomsSummary } from '@/features/rooms/rooms-summary';
 import { RoomsCategories } from '@/features/rooms/rooms-categories';
+import { RoomsCta } from '@/features/rooms/rooms-cta';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -19,6 +20,7 @@ export default async function RoomsPage({ params }: Props) {
       <RoomsOverview />
       <RoomsSummary locale={locale} />
       <RoomsCategories locale={locale} />
+      <RoomsCta />
     </>
   );
 }
