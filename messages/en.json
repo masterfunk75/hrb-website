@@ -39,6 +39,29 @@
     "who2Cta": "Explore the neighbourhood",
     "who3Title": "For the tournament, the match, the concert.",
     "who3Body": "Roland-Garros, a PSG final, a concert at La Seine Musicale, races at Longchamp, the Foire de Paris, a show at Porte de Versailles. Everything is on foot or 10 minutes away. Leave the car parked, forget the packed transport home. Walk back after the whistle.",
-    "who3Cta": "See what's on"
+    "who3Cta": "See what's on",
+
+    "roomsEyebrow": "Your stay",
+    "roomsTitle": "22 places to stay, 8 categories.",
+    "roomsIntro": "Five room types on the lower floors, three studios with an equipped kitchenette higher up. All air-conditioned, with a safe, a desk and free Wi-Fi.",
+    "room1Name": "Superior Studio",
+    "room1Pitch": "3 guests, kitchenette, high floor.",
+    "room2Name": "Standard Room",
+    "room2Pitch": "The classic format, queen 160 bed.",
+    "room3Name": "Classic Studio",
+    "room3Pitch": "Couple + 1 child, sofa bed, kitchenette.",
+    "room4Name": "Twin Room",
+    "room4Pitch": "Two separate beds, for colleagues or friends.",
+    "roomsCta": "See all categories",
+
+    "directTitle": "Book here, not elsewhere.",
+    "directSubtitle": "Three good reasons, concrete ones.",
+    "direct1Title": "The lowest rate is here.",
+    "direct1Body": "No platform commission passed on. The public price, booked direct.",
+    "direct2Title": "Flexible changes.",
+    "direct2Body": "Change your dates up to 24 h before arrival on flexible rates — your terms, not a platform's.",
+    "direct3Title": "A real person on the line.",
+    "direct3Body": "+33 1 49 10 05 45 — for groups, long stays and questions a form can't handle.",
+    "directCta": "Check availability"
   }
 }

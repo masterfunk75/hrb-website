@@ -39,6 +39,29 @@
     "who2Cta": "Découvrir le quartier",
     "who3Title": "Pour le tournoi, le match, le concert.",
     "who3Body": "Roland-Garros, finale PSG, concert à la Seine Musicale, courses à Longchamp, Foire de Paris, salon Porte de Versailles. Tout est à pied ou à 10 minutes. Vous gardez la voiture au parking, vous oubliez les retours en transport bondés. Retour à pied après le coup de sifflet.",
-    "who3Cta": "Voir les événements"
+    "who3Cta": "Voir les événements",
+
+    "roomsEyebrow": "Vos logements",
+    "roomsTitle": "22 logements, 8 catégories.",
+    "roomsIntro": "Cinq types de chambres aux étages bas, trois studios avec kitchenette équipée aux étages hauts. Tous climatisés, avec coffre-fort, espace bureau et Wi-Fi gratuit.",
+    "room1Name": "Studio Supérieur",
+    "room1Pitch": "3 personnes, kitchenette, étage haut.",
+    "room2Name": "Chambre Standard",
+    "room2Pitch": "Le format classique, lit queen 160.",
+    "room3Name": "Studio Classique",
+    "room3Pitch": "Couple + 1 enfant, canapé-lit, kitchenette.",
+    "room4Name": "Chambre Twin",
+    "room4Pitch": "Deux lits séparés, pour collègues ou amis.",
+    "roomsCta": "Voir toutes les catégories",
+
+    "directTitle": "Réservez ici, pas ailleurs.",
+    "directSubtitle": "Trois bonnes raisons, concrètes.",
+    "direct1Title": "Le tarif le plus bas, c'est ici.",
+    "direct1Body": "Aucune commission de plateforme répercutée. Le prix public, en direct.",
+    "direct2Title": "Modification flexible.",
+    "direct2Body": "Vous changez vos dates jusqu'à 24 h avant l'arrivée sur les tarifs flexibles — vos conditions, pas celles d'une plateforme.",
+    "direct3Title": "Un humain au bout du fil.",
+    "direct3Body": "01 49 10 05 45 — pour les groupes, les longs séjours et les questions qui sortent d'un formulaire.",
+    "directCta": "Voir les disponibilités"
   }
 }
