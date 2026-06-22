@@ -15,9 +15,9 @@
     "address": "32 rue des Longs Prés, 92100 Boulogne-Billancourt",
     "rights": "Boulogne Résidence Hôtel. All rights reserved."
   },
-  "Construction": {
-    "badge": "Coming soon",
-    "title": "BRH — Under construction",
-    "subtitle": "Boulogne Résidence Hôtel. Our new website is coming soon."
+  "Home": {
+    "heroTitle": "An aparthotel in Boulogne. For work, for Paris.",
+    "heroSubtitle": "22 rooms and studios, 5 minutes from Marcel Sembat metro. For a night, a week or several months.",
+    "heroSecondaryCta": "Discover the hotel"
   }
 }
