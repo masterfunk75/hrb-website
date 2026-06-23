@@ -76,6 +76,8 @@ export const comparisonRowsEn: ComparisonRow[] = [
   },
 ];
 
+// NB: the phone number appears verbatim in some answers below (editorial copy).
+// Keep it in sync with PHONE.display in @/config/site.
 export const directFaqEn: FaqItem[] = [
   {
     q: 'Is the rate really cheapest here?',

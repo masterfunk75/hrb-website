@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import type { ReactNode } from 'react';
 import { Section } from '@/components/ui/section';
 import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { PHONE } from '@/config/site';
 
 // Coordonnées : adresse, téléphone, horaires, accès + plan (placeholder).
 export function ContactDetails() {
@@ -12,10 +13,7 @@ export function ContactDetails() {
     {
       label: t('phoneLabel'),
       value: (
-        <a
-          href="tel:+33149100545"
-          className="hover:text-primary transition-colors"
-        >
+        <a href={PHONE.href} className="hover:text-primary transition-colors">
           {t('phoneValue')}
         </a>
       ),

@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { mainNav, secondaryNav } from '@/config/navigation';
+import { PHONE } from '@/config/site';
 
 // Pied de page global du site (Server Component).
 export function Footer() {
@@ -46,8 +47,8 @@ export function Footer() {
         <div className="text-on-emphasis/80 text-sm">
           <p>{t('address')}</p>
           <p className="mt-3">
-            <a href="tel:+33149100545" className="hover:text-on-emphasis">
-              +33 1 49 10 05 45
+            <a href={PHONE.href} className="hover:text-on-emphasis">
+              {PHONE.display}
             </a>
           </p>
         </div>

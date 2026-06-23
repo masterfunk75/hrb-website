@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { PageHero } from '@/components/layout/page-hero';
 import { Button } from '@/components/ui/button';
+import { PHONE } from '@/config/site';
 
 export function RoomsHero() {
   const t = useTranslations('Rooms');
@@ -14,7 +15,7 @@ export function RoomsHero() {
       photoLabel={t('heroPhoto')}
     >
       <Button href="/#booking">{tNav('book')}</Button>
-      <Button href="tel:+33149100545" variant="outline">
+      <Button href={PHONE.href} variant="outline">
         {t('heroCallCta')}
       </Button>
     </PageHero>

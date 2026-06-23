@@ -77,6 +77,8 @@ export const comparisonRowsFr: ComparisonRow[] = [
   },
 ];
 
+// NB : le numéro de téléphone apparaît en clair dans certaines réponses ci-dessous
+// (contenu rédactionnel). Garder synchronisé avec PHONE.display dans @/config/site.
 export const directFaqFr: FaqItem[] = [
   {
     q: 'Le tarif est-il vraiment le moins cher ici ?',

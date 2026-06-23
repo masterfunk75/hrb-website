@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { PageCta } from '@/components/layout/page-cta';
 import { Button } from '@/components/ui/button';
+import { PHONE } from '@/config/site';
 
 // CTA final de la page Quartier + rappel téléphone (numéro cliquable via t.rich :
 // le pattern next-intl pour insérer un lien dans une chaîne traduite).
@@ -15,7 +16,7 @@ export function QuartierCta() {
       note={t.rich('finalPhone', {
         phone: (chunks) => (
           <a
-            href="tel:+33149100545"
+            href={PHONE.href}
             className="text-on-emphasis font-medium underline underline-offset-2"
           >
             {chunks}

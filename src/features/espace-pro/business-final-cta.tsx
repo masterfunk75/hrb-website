@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { PHONE } from '@/config/site';
 
 // §10 — CTA final : 3 portes équivalentes (devis / appel / visite).
 export function BusinessFinalCta() {
@@ -18,8 +19,8 @@ export function BusinessFinalCta() {
     {
       title: t('finalCallTitle'),
       body: t('finalCallBody'),
-      cta: '+33 1 49 10 05 45',
-      href: 'tel:+33149100545',
+      cta: PHONE.display,
+      href: PHONE.href,
       variant: 'outline' as const,
     },
     {
