@@ -27,9 +27,9 @@ export function RoomCategory({ category, reverse = false }: Props) {
           <span className="text-accent font-mono text-xs tracking-[0.2em] uppercase">
             {category.name}
           </span>
-          <h3 className="font-display text-primary mt-3 text-2xl sm:text-3xl">
+          <h2 className="font-display text-primary mt-3 text-2xl sm:text-3xl">
             {category.title}
-          </h3>
+          </h2>
           <p className="text-muted mt-1">{category.subtitle}</p>
           <p className="text-muted mt-4">{category.description}</p>
 

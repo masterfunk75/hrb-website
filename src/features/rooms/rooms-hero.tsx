@@ -11,7 +11,7 @@ export function RoomsHero() {
       eyebrow={t('heroEyebrow')}
       title={t('heroTitle')}
       subtitle={t('heroSubtitle')}
-      photoLabel="Chambres — hero (BRH_089)"
+      photoLabel={t('heroPhoto')}
     >
       <Button href="/#booking">{tNav('book')}</Button>
       <Button href="tel:+33149100545" variant="outline">

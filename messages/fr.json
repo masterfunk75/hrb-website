@@ -89,7 +89,16 @@
     "overviewSignature": "Réservez en direct, et vous montez en gamme si une catégorie supérieure est libre à votre arrivée.",
     "ctaTitle": "Faites votre choix.",
     "ctaSubtitle": "Le meilleur tarif est ici, garanti. Et si une catégorie supérieure est libre à votre arrivée, vous y montez.",
-    "ctaAdvice": "Demander conseil"
+    "ctaAdvice": "Demander conseil",
+    "heroPhoto": "Chambres — vue d'ensemble",
+    "bandPhoto": "Bandeau — le détail qui change tout",
+    "comparisonEyebrow": "Comparer en un coup d'œil",
+    "comparisonTitle": "Toutes les catégories, côte à côte.",
+    "amenitiesEyebrow": "Dans tous les logements",
+    "amenitiesTitle": "Ce qui est partout, sans exception.",
+    "recoEyebrow": "Vous hésitez ?",
+    "recoTitle": "On vous aide à choisir.",
+    "recoIntro": "Selon qui vous êtes et combien de temps vous restez."
   },
   "Neighborhood": {
     "heroEyebrow": "Le quartier",

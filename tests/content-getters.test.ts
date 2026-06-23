@@ -20,6 +20,11 @@ import {
   getDirectFaq,
 } from '@/content/direct';
 import { getAboutEngagements } from '@/content/about';
+import {
+  getRoomComparison,
+  getAmenityGroups,
+  getRoomRecommendations,
+} from '@/content/rooms-extras';
 
 // Comptes attendus par getter (source = contenus lot-2/lot-3).
 const EXPECTED_COUNTS = [
@@ -38,6 +43,9 @@ const EXPECTED_COUNTS = [
   { name: 'comparisonRows', get: getComparisonRows, count: 6 },
   { name: 'directFaq', get: getDirectFaq, count: 6 },
   { name: 'aboutEngagements', get: getAboutEngagements, count: 3 },
+  { name: 'roomComparison', get: getRoomComparison, count: 12 },
+  { name: 'amenityGroups', get: getAmenityGroups, count: 4 },
+  { name: 'roomRecommendations', get: getRoomRecommendations, count: 5 },
 ];
 
 describe('getters de contenu — comptes attendus (FR)', () => {
@@ -85,6 +93,15 @@ describe('intégrité des données', () => {
     for (const item of [...getBusinessFaq('fr'), ...getDirectFaq('fr')]) {
       expect(item.q.length).toBeGreaterThan(0);
       expect(item.a.length).toBeGreaterThan(0);
+    }
+  });
+
+  it('chaque ligne du tableau comparatif a une valeur par catégorie (FR et EN)', () => {
+    for (const locale of ['fr', 'en']) {
+      const cols = getRoomCategories(locale).length;
+      for (const row of getRoomComparison(locale)) {
+        expect(row.values).toHaveLength(cols);
+      }
     }
   });
 });
