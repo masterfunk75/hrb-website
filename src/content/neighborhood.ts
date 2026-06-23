@@ -1,6 +1,21 @@
-import type { Poi, EventCategory, Address } from '@/types/neighborhood';
-import { poisFr, eventCategoriesFr, addressesFr } from './fr/neighborhood';
-import { poisEn, eventCategoriesEn, addressesEn } from './en/neighborhood';
+import type {
+  Poi,
+  EventCategory,
+  Address,
+  TransportMode,
+} from '@/types/neighborhood';
+import {
+  poisFr,
+  eventCategoriesFr,
+  addressesFr,
+  transportModesFr,
+} from './fr/neighborhood';
+import {
+  poisEn,
+  eventCategoriesEn,
+  addressesEn,
+  transportModesEn,
+} from './en/neighborhood';
 
 // Lieux de la carte du quartier, dans la langue demandée (fr par défaut).
 export function getPois(locale: string): Poi[] {
@@ -15,4 +30,9 @@ export function getEventCategories(locale: string): EventCategory[] {
 // Carnet de bonnes adresses, dans la langue demandée (fr par défaut).
 export function getAddresses(locale: string): Address[] {
   return locale === 'en' ? addressesEn : addressesFr;
+}
+
+// Modes d'accès & transports, dans la langue demandée (fr par défaut).
+export function getTransportModes(locale: string): TransportMode[] {
+  return locale === 'en' ? transportModesEn : transportModesFr;
 }

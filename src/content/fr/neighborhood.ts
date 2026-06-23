@@ -1,4 +1,9 @@
-import type { Poi, EventCategory, Address } from '@/types/neighborhood';
+import type {
+  Poi,
+  EventCategory,
+  Address,
+  TransportMode,
+} from '@/types/neighborhood';
 
 // Les 12 lieux de la carte du quartier (distances vérifiées, source lot-2 v2).
 export const poisFr: Poi[] = [
@@ -158,5 +163,70 @@ export const addressesFr: Address[] = [
     pitch:
       "Une bouteille pour rentrer en studio, un fromage pour aller avec, deux mots du caviste qui sait de quoi il parle. Pour les soirs où on n'a pas envie de sortir.",
     photoLabel: 'Cave / épicerie fine',
+  },
+];
+
+// Accès & transports (7 modes). Source lot-2 v2.
+export const transportModesFr: TransportMode[] = [
+  {
+    id: 'metro',
+    title: 'En métro',
+    lead: 'Marcel Sembat, ligne 9. Quatre minutes à pied, et vous voilà sur la même ligne que les Champs-Élysées et Châtelet.',
+    details: [
+      'Direction Mairie de Montreuil : Châtelet en 25 min, République en 30 min.',
+      'Direction Pont de Sèvres (terminus) : 1 station.',
+      'Premier métro 5h30. Dernier métro 0h40 (1h40 vendredi/samedi).',
+    ],
+  },
+  {
+    id: 'rer',
+    title: 'En RER',
+    lead: 'Issy-Val de Seine, RER C. Sept minutes à pied, et la rive gauche commence.',
+    details: [
+      'Tour Eiffel (Champ-de-Mars) en 12 min. Saint-Michel en 17 min. La solution rapide quand vous visez le sud de Paris.',
+    ],
+  },
+  {
+    id: 'aeroports',
+    title: 'Depuis les aéroports',
+    lead: 'Trois aéroports, trois trajets connus.',
+    details: [
+      'CDG → Boulogne : RER B puis ligne 9. 1h05 environ.',
+      "Orly → Boulogne : Tramway T7 ou Orlyval + RER C jusqu'à Issy-Val de Seine. 50 min environ.",
+      "Beauvais → Boulogne : bus jusqu'à Porte Maillot, puis ligne 1 + ligne 9 à Franklin D. Roosevelt. 1h30 environ.",
+    ],
+  },
+  {
+    id: 'gares',
+    title: 'Depuis les gares parisiennes',
+    lead: 'Les six gares parisiennes, toutes à 25-35 minutes.',
+    details: [
+      "Gare du Nord / Gare de l'Est : ligne 9 directe depuis Strasbourg-Saint-Denis. 35 min.",
+      'Saint-Lazare : ligne 13 puis ligne 9. 30 min.',
+      'Gare de Lyon / Austerlitz : ligne 14 puis ligne 9 à Saint-Lazare. 30-35 min.',
+      'Montparnasse : ligne 6 ou 13, puis ligne 9. 25 min.',
+    ],
+  },
+  {
+    id: 'voiture',
+    title: 'En voiture',
+    lead: 'Pour ceux qui viennent en voiture.',
+    details: [
+      "Parking à proximité sur réservation — 180 m de l'hôtel, 15 € par nuit, à réserver à la réception lors de la réservation.",
+      'Périphérique : sortie Porte de Saint-Cloud ou Porte de Sèvres (5 min).',
+      'Stationnement résidentiel : zoné payant en journée, libre la nuit et le dimanche.',
+    ],
+  },
+  {
+    id: 'electrique',
+    title: 'En véhicule électrique',
+    lead: "Borne de recharge à 200 m de l'hôtel. (Opérateur à confirmer auprès de la réception.)",
+    details: [],
+  },
+  {
+    id: 'velo',
+    title: 'À vélo',
+    lead: "Vélib' à proximité immédiate (Marcel Sembat, Pont de Sèvres). Pistes cyclables le long de la Seine et dans le Bois.",
+    details: [],
   },
 ];

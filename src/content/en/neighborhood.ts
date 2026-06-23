@@ -1,4 +1,9 @@
-import type { Poi, EventCategory, Address } from '@/types/neighborhood';
+import type {
+  Poi,
+  EventCategory,
+  Address,
+  TransportMode,
+} from '@/types/neighborhood';
 
 // The 12 places on the neighbourhood map (English, decimal points).
 export const poisEn: Poi[] = [
@@ -161,5 +166,70 @@ export const addressesEn: Address[] = [
     pitch:
       "A bottle for the studio, a cheese to go with it, a few words from a wine merchant who knows what he's talking about. For the evenings when you don't feel like going out.",
     photoLabel: 'Wine shop / deli',
+  },
+];
+
+// Getting here & getting around (7 modes). Source lot-2 v2.
+export const transportModesEn: TransportMode[] = [
+  {
+    id: 'metro',
+    title: 'By metro',
+    lead: "Marcel Sembat, line 9. A four-minute walk, and you're on the same line as the Champs-Élysées and Châtelet.",
+    details: [
+      'Towards Mairie de Montreuil: Châtelet in 25 min, République in 30 min.',
+      'Towards Pont de Sèvres (terminus): 1 stop.',
+      'First metro 5:30 am. Last metro 0:40 am (1:40 am Fri/Sat).',
+    ],
+  },
+  {
+    id: 'rer',
+    title: 'By RER',
+    lead: 'Issy-Val de Seine, RER C. A seven-minute walk, and the Left Bank begins.',
+    details: [
+      "Eiffel Tower (Champ-de-Mars) in 12 min. Saint-Michel in 17 min. The fast option when you're headed for southern Paris.",
+    ],
+  },
+  {
+    id: 'aeroports',
+    title: 'From the airports',
+    lead: 'Three airports, three well-known routes.',
+    details: [
+      'CDG → Boulogne: RER B then line 9. About 1 h 05.',
+      'Orly → Boulogne: tram T7 or Orlyval + RER C to Issy-Val de Seine. About 50 min.',
+      'Beauvais → Boulogne: bus to Porte Maillot, then line 1 + line 9 at Franklin D. Roosevelt. About 1 h 30.',
+    ],
+  },
+  {
+    id: 'gares',
+    title: 'From the Paris stations',
+    lead: 'All six Paris stations, 25-35 minutes away.',
+    details: [
+      "Gare du Nord / Gare de l'Est: line 9 direct from Strasbourg-Saint-Denis. 35 min.",
+      'Saint-Lazare: line 13 then line 9. 30 min.',
+      'Gare de Lyon / Austerlitz: line 14 then line 9 at Saint-Lazare. 30-35 min.',
+      'Montparnasse: line 6 or 13, then line 9. 25 min.',
+    ],
+  },
+  {
+    id: 'voiture',
+    title: 'By car',
+    lead: 'For those arriving by car.',
+    details: [
+      'Nearby parking on request — 180 m from the hotel, €15 per night, to be booked at reception when you reserve.',
+      'Ring road: exit Porte de Saint-Cloud or Porte de Sèvres (5 min).',
+      'Residential parking: paid zone during the day, free at night and on Sundays.',
+    ],
+  },
+  {
+    id: 'electrique',
+    title: 'By electric vehicle',
+    lead: 'A charging point 200 m from the hotel. (Operator to be confirmed at reception.)',
+    details: [],
+  },
+  {
+    id: 'velo',
+    title: 'By bike',
+    lead: "Vélib' right nearby (Marcel Sembat, Pont de Sèvres). Cycle paths along the Seine and in the Bois.",
+    details: [],
   },
 ];

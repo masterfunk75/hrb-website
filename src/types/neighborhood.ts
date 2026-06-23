@@ -35,3 +35,12 @@ export type Address = {
   /** Légende du placeholder photo (4:3). */
   photoLabel: string;
 };
+
+// Mode d'accès / déplacement (métro, RER, aéroports, gares, voiture, VE, vélo).
+export type TransportMode = {
+  id: string;
+  title: string;
+  lead: string;
+  /** Lignes de détail (peut être vide). */
+  details: string[];
+};

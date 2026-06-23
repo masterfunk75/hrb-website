@@ -4,6 +4,7 @@ import { LivingInBoulogne } from '@/features/quartier/living-in-boulogne';
 import { WhatsAround } from '@/features/quartier/whats-around';
 import { BreathingBand } from '@/features/quartier/breathing-band';
 import { Addresses } from '@/features/quartier/addresses';
+import { Transport } from '@/features/quartier/transport';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,6 +22,7 @@ export default async function QuartierPage({ params }: Props) {
       <WhatsAround locale={locale} />
       <BreathingBand />
       <Addresses locale={locale} />
+      <Transport locale={locale} />
     </>
   );
 }
