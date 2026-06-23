@@ -211,5 +211,25 @@
     "finalTitle": "Ready to book?",
     "finalSubtitle": "The rate is here. So is the care.",
     "finalCallCta": "Call reception"
+  },
+  "Contact": {
+    "heroEyebrow": "Contact",
+    "heroTitle": "Let's talk.",
+    "heroSubtitle": "A question, a special request, a group stay? The reception team will answer — and by phone is the most direct.",
+    "heroPhoto": "Contact — reception",
+    "heroCallCta": "Call reception",
+    "detailsEyebrow": "Details",
+    "detailsTitle": "Where to find us, how to reach us.",
+    "addressLabel": "Address",
+    "addressValue": "32 rue des Longs Prés, 92100 Boulogne-Billancourt",
+    "phoneLabel": "Phone",
+    "phoneValue": "+33 1 49 10 05 45",
+    "hoursLabel": "Reception hours",
+    "hoursValue": "Monday to Friday 7 am–10 pm. Saturday and Sunday 8 am–8 pm.",
+    "accessLabel": "Getting here",
+    "accessValue": "Marcel Sembat metro (line 9), a 4-minute walk. Nearby parking on request.",
+    "mapPhoto": "Access map — 32 rue des Longs Prés",
+    "finalTitle": "Ready to come?",
+    "finalSubtitle": "The best rate is by booking direct."
   }
 }

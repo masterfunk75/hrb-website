@@ -211,5 +211,25 @@
     "finalTitle": "Prêt à réserver ?",
     "finalSubtitle": "Le tarif est ici. L'attention aussi.",
     "finalCallCta": "Appeler la réception"
+  },
+  "Contact": {
+    "heroEyebrow": "Contact",
+    "heroTitle": "Parlons-en.",
+    "heroSubtitle": "Une question, une demande spéciale, un séjour de groupe ? L'équipe de réception vous répond — et par téléphone, c'est le plus direct.",
+    "heroPhoto": "Contact — la réception",
+    "heroCallCta": "Appeler la réception",
+    "detailsEyebrow": "Coordonnées",
+    "detailsTitle": "Où nous trouver, comment nous joindre.",
+    "addressLabel": "Adresse",
+    "addressValue": "32 rue des Longs Prés, 92100 Boulogne-Billancourt",
+    "phoneLabel": "Téléphone",
+    "phoneValue": "+33 1 49 10 05 45",
+    "hoursLabel": "Horaires de réception",
+    "hoursValue": "Du lundi au vendredi 7h-22h. Samedi et dimanche 8h-20h.",
+    "accessLabel": "Accès",
+    "accessValue": "Métro Marcel Sembat (ligne 9), à 4 minutes à pied. Parking à proximité sur réservation.",
+    "mapPhoto": "Plan d'accès — 32 rue des Longs Prés",
+    "finalTitle": "Prêt à venir ?",
+    "finalSubtitle": "Le meilleur tarif est en réservation directe."
   }
 }
