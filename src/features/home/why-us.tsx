@@ -13,11 +13,7 @@ export function WhyUs() {
   ];
 
   return (
-    <Section
-      eyebrow={t('whyEyebrow')}
-      title={t('whyTitle')}
-      className="bg-surface"
-    >
+    <Section eyebrow={t('whyEyebrow')} title={t('whyTitle')}>
       <div className="grid gap-6 md:grid-cols-3">
         {items.map((item) => (
           <Card key={item.n}>

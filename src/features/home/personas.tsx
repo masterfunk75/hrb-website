@@ -29,7 +29,12 @@ export function Personas() {
   ];
 
   return (
-    <Section id="pour-qui" eyebrow={t('whoEyebrow')} title={t('whoTitle')}>
+    <Section
+      id="pour-qui"
+      eyebrow={t('whoEyebrow')}
+      title={t('whoTitle')}
+      className="bg-surface"
+    >
       <div className="grid gap-6 md:grid-cols-3">
         {items.map((item) => (
           <Card key={item.title}>
