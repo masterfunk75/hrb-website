@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Fraunces, Inter, JetBrains_Mono } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Header } from '@/components/layout/header';
@@ -53,6 +53,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   // Active le rendu statique pour cette langue
   setRequestLocale(locale);
+  const t = await getTranslations('Nav');
 
   return (
     <html
@@ -61,9 +62,17 @@ export default async function LocaleLayout({ children, params }: Props) {
     >
       <body className="antialiased">
         <NextIntlClientProvider>
+          <a
+            href="#contenu"
+            className="bg-primary text-on-emphasis focus:ring-accent sr-only z-50 rounded-md px-4 py-2 text-sm font-medium focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:ring-2"
+          >
+            {t('skipToContent')}
+          </a>
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">{children}</main>
+            <main id="contenu" tabIndex={-1} className="flex-1 outline-none">
+              {children}
+            </main>
             <Footer />
           </div>
         </NextIntlClientProvider>

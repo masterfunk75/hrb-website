@@ -17,13 +17,13 @@ export function Header() {
             Boulogne Résidence
           </span>
           <span className="text-muted font-mono text-[10px] tracking-[0.2em] uppercase">
-            Appart-hôtel
+            {t('brandKind')}
           </span>
         </Link>
 
         <nav
           className="hidden items-center gap-8 md:flex"
-          aria-label="Navigation principale"
+          aria-label={t('mainNavLabel')}
         >
           {mainNav.map((item) => (
             <Link

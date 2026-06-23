@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { FormEvent, ReactNode } from 'react';
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
@@ -40,6 +40,12 @@ function Field({
 export function QuoteForm() {
   const t = useTranslations('Business');
   const [submitted, setSubmitted] = useState(false);
+  const successRef = useRef<HTMLDivElement>(null);
+
+  // Déplace le focus sur la confirmation (annoncée via role="status") après envoi.
+  useEffect(() => {
+    if (submitted) successRef.current?.focus();
+  }, [submitted]);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -56,7 +62,13 @@ export function QuoteForm() {
       className="scroll-mt-20"
     >
       {submitted ? (
-        <div className="border-line bg-success-soft max-w-3xl rounded-lg border p-6">
+        <div
+          ref={successRef}
+          role="status"
+          aria-live="polite"
+          tabIndex={-1}
+          className="border-line bg-success-soft max-w-3xl rounded-lg border p-6 outline-none"
+        >
           <p className="text-primary font-display text-lg">
             {t('formSuccessTitle')}
           </p>

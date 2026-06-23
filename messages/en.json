@@ -10,7 +10,11 @@
     "book": "Check availability",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "languageLabel": "Language"
+    "languageLabel": "Language",
+    "brandKind": "Aparthotel",
+    "mainNavLabel": "Main navigation",
+    "mobileNavLabel": "Mobile navigation",
+    "skipToContent": "Skip to content"
   },
   "Footer": {
     "tagline": "Aparthotel in Boulogne-Billancourt. A few nights or several months.",
@@ -190,6 +194,10 @@
     "formRequired": "* required fields",
     "formSuccessTitle": "Thanks, noted.",
     "formSuccessBody": "We'll get back to you within 24 business hours.",
+    "callIntro": "A question first? A specific volume? Prefer voice over a form?",
+    "callAction": "Call us directly",
+    "callHours": "Monday to Friday, 7 am–12 pm and 3 pm–10 pm.",
+    "callSignature": "A real person on the line.",
     "faqEyebrow": "Frequently asked",
     "faqTitle": "What we get asked most.",
     "finalEyebrow": "Shall we talk?",

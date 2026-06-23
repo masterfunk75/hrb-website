@@ -10,7 +10,11 @@
     "book": "Voir les disponibilités",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "languageLabel": "Langue"
+    "languageLabel": "Langue",
+    "brandKind": "Appart-hôtel",
+    "mainNavLabel": "Navigation principale",
+    "mobileNavLabel": "Navigation mobile",
+    "skipToContent": "Aller au contenu"
   },
   "Footer": {
     "tagline": "Appart-hôtel à Boulogne-Billancourt. Quelques nuits ou plusieurs mois.",
@@ -190,6 +194,10 @@
     "formRequired": "* champs obligatoires",
     "formSuccessTitle": "Merci, c'est noté.",
     "formSuccessBody": "On revient vers vous sous 24 heures ouvrées.",
+    "callIntro": "Une question avant ? Un volume précis ? Vous préférez la voix au formulaire ?",
+    "callAction": "Appelez-nous directement",
+    "callHours": "du lundi au vendredi, 7h-12h et 15h-22h.",
+    "callSignature": "Une vraie personne au bout du fil.",
     "faqEyebrow": "Questions fréquentes",
     "faqTitle": "Ce qu'on nous demande le plus souvent.",
     "finalEyebrow": "On en parle ?",

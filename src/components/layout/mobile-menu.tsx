@@ -46,7 +46,7 @@ export function MobileMenu() {
 
       {open && (
         <div className="border-line bg-canvas absolute inset-x-0 top-full border-t px-6 py-6 shadow-lg">
-          <nav className="flex flex-col gap-4" aria-label="Navigation mobile">
+          <nav className="flex flex-col gap-4" aria-label={t('mobileNavLabel')}>
             {mainNav.map((item) => (
               <Link
                 key={item.href}

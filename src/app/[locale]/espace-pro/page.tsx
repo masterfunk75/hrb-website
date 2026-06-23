@@ -7,6 +7,7 @@ import { BusinessStayTypes } from '@/features/espace-pro/business-stay-types';
 import { BusinessConditions } from '@/features/espace-pro/business-conditions';
 import { BusinessMap } from '@/features/espace-pro/business-map';
 import { QuoteForm } from '@/features/espace-pro/quote-form';
+import { BusinessCallDirect } from '@/features/espace-pro/business-call-direct';
 import { BusinessFaq } from '@/features/espace-pro/business-faq';
 import { BusinessFinalCta } from '@/features/espace-pro/business-final-cta';
 
@@ -30,6 +31,7 @@ export default async function EspaceProPage({ params }: Props) {
       <BusinessConditions locale={locale} />
       <BusinessMap locale={locale} />
       <QuoteForm />
+      <BusinessCallDirect />
       <BusinessFaq locale={locale} />
       <BusinessFinalCta />
     </>

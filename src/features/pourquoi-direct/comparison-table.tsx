@@ -20,13 +20,14 @@ export function ComparisonTable({ locale }: Props) {
     >
       <div className="overflow-x-auto">
         <table className="w-full min-w-[40rem] border-collapse text-left text-sm">
+          <caption className="sr-only">{t('tableTitle')}</caption>
           <thead>
             <tr className="border-line-strong border-b">
-              <th className="w-1/4 py-3 pr-4" />
-              <th className="text-primary py-3 pr-4 font-medium">
+              <th scope="col" className="w-1/4 py-3 pr-4" />
+              <th scope="col" className="text-primary py-3 pr-4 font-medium">
                 {t('tableColDirect')}
               </th>
-              <th className="text-muted py-3 font-medium">
+              <th scope="col" className="text-muted py-3 font-medium">
                 {t('tableColPlatform')}
               </th>
             </tr>
@@ -34,7 +35,9 @@ export function ComparisonTable({ locale }: Props) {
           <tbody>
             {rows.map((row) => (
               <tr key={row.label} className="border-line border-b align-top">
-                <td className="text-ink py-3 pr-4 font-medium">{row.label}</td>
+                <th scope="row" className="text-ink py-3 pr-4 font-medium">
+                  {row.label}
+                </th>
                 <td className="text-ink py-3 pr-4">{row.direct}</td>
                 <td className="text-muted py-3">{row.platform}</td>
               </tr>
