@@ -1,18 +1,10 @@
 import { useTranslations } from 'next-intl';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { PhotoBand } from '@/components/ui/photo-band';
 
-// Bandeau photo pleine largeur (respiration entre « Ce qui se passe autour »
-// et « Quelques adresses »). Photo différée → placeholder 3:1 full-bleed.
+// Bandeau respiration de la page Quartier (entre « Ce qui se passe autour »
+// et « Quelques adresses ») — délègue à la primitive partagée PhotoBand.
 export function BreathingBand() {
   const t = useTranslations('Neighborhood');
 
-  return (
-    <section>
-      <PhotoPlaceholder
-        ratio="3/1"
-        label={t('bandPhoto')}
-        className="rounded-none border-x-0"
-      />
-    </section>
-  );
+  return <PhotoBand label={t('bandPhoto')} />;
 }
