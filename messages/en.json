@@ -102,6 +102,21 @@
     "addressStreetPending": "Exact address to be confirmed",
     "addressesNote": "List kept up to date. Got a good address to add? Tell us at reception.",
     "transportEyebrow": "Getting around",
-    "transportTitle": "How you arrive. How you get around."
+    "transportTitle": "How you arrive. How you get around.",
+    "personasEyebrow": "Who it's for",
+    "personasTitle": "Three good reasons to be here.",
+    "personasIntro": "Depending on what you're after.",
+    "persona1Title": "The Parisians' Paris.",
+    "persona1Body": "You're here to see Paris, but without the queue at the Eiffel Tower or the 14 m² on a busy street. You take line 9, you're at Châtelet in twenty-five minutes. In the morning, your coffee is on a street where people actually work. In the evening, you walk home from the concert.",
+    "persona1Cta": "Check availability",
+    "persona2Title": "The corridor between Paris and La Défense.",
+    "persona2Body": "Carrefour, Renault, TF1, Boursorama, La Défense, Issy. Your clients are within a five-kilometre radius. You sleep where it simplifies the commute, you eat where there's a real restaurant, you run in the Bois before the first call.",
+    "persona2Cta": "See business stays",
+    "persona3Title": "Front row, on foot.",
+    "persona3Body": "Roland-Garros, the PSG match, the concert at La Seine Musicale, the races at Longchamp, the final at La Défense Arena. You want to walk to the stadium and walk home. That's exactly where we come in.",
+    "persona3Cta": "Check availability",
+    "finalTitle": "You can picture it now.",
+    "finalSubtitle": "Choose your dates, we'll handle the rest.",
+    "finalPhone": "A question about the neighbourhood or a specific event? <phone>+33 1 49 10 05 45</phone> — Monday to Friday, 7 am–10 pm."
   }
 }

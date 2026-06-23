@@ -102,6 +102,21 @@
     "addressStreetPending": "Adresse exacte à confirmer",
     "addressesNote": "Liste tenue à jour. Une bonne adresse à ajouter ? Dites-le-nous à la réception.",
     "transportEyebrow": "Accès",
-    "transportTitle": "Comment vous arrivez. Comment vous bougez."
+    "transportTitle": "Comment vous arrivez. Comment vous bougez.",
+    "personasEyebrow": "À qui ça parle",
+    "personasTitle": "Trois bonnes raisons d'être là.",
+    "personasIntro": "Selon ce que vous venez chercher.",
+    "persona1Title": "Le Paris des Parisiens.",
+    "persona1Body": "Vous venez voir Paris, mais sans la queue à la Tour Eiffel ni le 14 m² sur rue passante. Vous prenez la ligne 9, vous êtes à Châtelet en vingt-cinq minutes. Le matin, votre café est dans une rue où on travaille pour de vrai. Le soir, vous rentrez à pied du concert.",
+    "persona1Cta": "Voir les disponibilités",
+    "persona2Title": "Le couloir entre Paris et La Défense.",
+    "persona2Body": "Carrefour, Renault, TF1, Boursorama, La Défense, Issy. Vos clients sont dans un rayon de cinq kilomètres. Vous dormez où ça simplifie les trajets, vous mangez où il y a un vrai resto, vous courez dans le Bois avant le premier appel.",
+    "persona2Cta": "Voir les séjours pro",
+    "persona3Title": "Le premier rang, en marchant.",
+    "persona3Body": "Roland-Garros, le match du PSG, le concert à La Seine Musicale, la course à Longchamp, la finale à La Défense Arena. Vous voulez marcher au stade et rentrer à pied. C'est exactement là qu'on est utile.",
+    "persona3Cta": "Voir les disponibilités",
+    "finalTitle": "Vous voyez le décor.",
+    "finalSubtitle": "Choisissez vos dates, on s'occupe du reste.",
+    "finalPhone": "Une question sur le quartier ou un événement précis ? <phone>+33 1 49 10 05 45</phone> — du lundi au vendredi 7h-22h."
   }
 }
