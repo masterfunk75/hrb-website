@@ -6,5 +6,5 @@ for d in "$HOME"/.nvm/versions/node/v24.*/bin; do
 done
 export PATH
 
-# 1) Lint + format sur les fichiers indexés   2) Type-check du projet
-npx lint-staged && npm run typecheck
+# 1) Lint + format sur les fichiers indexés   2) Type-check   3) Tests unitaires
+npx lint-staged && npm run typecheck && npm test

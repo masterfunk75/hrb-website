@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link } from '@/i18n/navigation';
+import { isPlainAnchorHref } from '@/lib/href';
 
 type Variant = 'primary' | 'outline' | 'light' | 'outlineLight';
 
@@ -30,7 +31,7 @@ export function Button({
 }: ButtonProps) {
   const classes = `inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${variants[variant]} ${className ?? ''}`;
 
-  if (/^(tel:|mailto:|https?:|#)/.test(href)) {
+  if (isPlainAnchorHref(href)) {
     return (
       <a href={href} className={classes}>
         {children}
