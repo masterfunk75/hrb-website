@@ -5,6 +5,8 @@
     "neighborhood": "Neighbourhood",
     "business": "Business",
     "direct": "Why book direct",
+    "about": "About",
+    "contact": "Contact",
     "book": "Check availability",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
@@ -13,7 +15,9 @@
   "Footer": {
     "tagline": "Aparthotel in Boulogne-Billancourt. A few nights or several months.",
     "address": "32 rue des Longs Prés, 92100 Boulogne-Billancourt",
-    "rights": "Boulogne Résidence Hôtel. All rights reserved."
+    "rights": "Boulogne Résidence Hôtel. All rights reserved.",
+    "navLabel": "Footer navigation",
+    "navSecondaryLabel": "Secondary links"
   },
   "Home": {
     "heroTitle": "An aparthotel in Boulogne. For work, for Paris.",

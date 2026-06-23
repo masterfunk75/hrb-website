@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { mainNav } from '@/config/navigation';
+import { mainNav, secondaryNav } from '@/config/navigation';
 
 // Pied de page global du site (Server Component).
 export function Footer() {
@@ -16,11 +16,23 @@ export function Footer() {
           <p className="text-on-emphasis/70 mt-2 text-sm">{t('tagline')}</p>
         </div>
 
+        <nav className="flex flex-col gap-2" aria-label={t('navLabel')}>
+          {mainNav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-on-emphasis/80 hover:text-on-emphasis text-sm transition-colors"
+            >
+              {tNav(item.labelKey)}
+            </Link>
+          ))}
+        </nav>
+
         <nav
           className="flex flex-col gap-2"
-          aria-label="Navigation du pied de page"
+          aria-label={t('navSecondaryLabel')}
         >
-          {mainNav.map((item) => (
+          {secondaryNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}

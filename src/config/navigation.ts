@@ -15,3 +15,9 @@ export const mainNav: NavItem[] = [
   { href: '/espace-pro', labelKey: 'business' },
   { href: '/pourquoi-direct', labelKey: 'direct' },
 ];
+
+/** Liens secondaires (pied de page uniquement). */
+export const secondaryNav: NavItem[] = [
+  { href: '/a-propos', labelKey: 'about' },
+  { href: '/contact', labelKey: 'contact' },
+];
