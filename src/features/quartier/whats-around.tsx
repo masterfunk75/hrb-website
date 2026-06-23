@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
 import { PoiList } from '@/components/ui/poi-list';
 import { getPois, getEventCategories } from '@/content/neighborhood';
+import { BOOKING_HREF } from '@/config/site';
 
 type Props = {
   locale: string;
@@ -55,7 +56,7 @@ export function WhatsAround({ locale }: Props) {
       </div>
 
       <div className="mt-10">
-        <Button href="/#booking">{tNav('book')}</Button>
+        <Button href={BOOKING_HREF}>{tNav('book')}</Button>
       </div>
     </Section>
   );

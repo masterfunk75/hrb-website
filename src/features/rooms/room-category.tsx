@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
 import { Button } from '@/components/ui/button';
+import { BOOKING_HREF } from '@/config/site';
 import type { RoomCategory as RoomCategoryType } from '@/types/rooms';
 
 type Props = {
@@ -48,7 +49,7 @@ export function RoomCategory({ category, reverse = false }: Props) {
           </dl>
 
           <div className="mt-6">
-            <Button href="/#booking">{tNav('book')}</Button>
+            <Button href={BOOKING_HREF}>{tNav('book')}</Button>
           </div>
         </div>
       </Container>

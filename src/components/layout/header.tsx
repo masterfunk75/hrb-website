@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { mainNav } from '@/config/navigation';
+import { BOOKING_HREF } from '@/config/site';
 import { LocaleSwitcher } from './locale-switcher';
 import { MobileMenu } from './mobile-menu';
 
@@ -39,7 +40,7 @@ export function Header() {
         <div className="hidden items-center gap-4 md:flex">
           <LocaleSwitcher />
           <Link
-            href="/#booking"
+            href={BOOKING_HREF}
             className="bg-primary text-on-emphasis hover:bg-primary-hover rounded-full px-4 py-2 text-sm font-medium transition-colors"
           >
             {t('book')}

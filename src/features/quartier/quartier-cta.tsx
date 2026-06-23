@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { PageCta } from '@/components/layout/page-cta';
 import { Button } from '@/components/ui/button';
-import { PHONE } from '@/config/site';
+import { BOOKING_HREF, PHONE } from '@/config/site';
 
 // CTA final de la page Quartier + rappel téléphone (numéro cliquable via t.rich :
 // le pattern next-intl pour insérer un lien dans une chaîne traduite).
@@ -24,7 +24,7 @@ export function QuartierCta() {
         ),
       })}
     >
-      <Button href="/#booking" variant="light">
+      <Button href={BOOKING_HREF} variant="light">
         {tNav('book')}
       </Button>
     </PageCta>

@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PHONE } from '@/config/site';
+import { BOOKING_HREF, PHONE } from '@/config/site';
 
 // §6 — CTA final : 3 cards d'invitation, la première (Réserver) accentuée.
 export function AboutFinalCta() {
@@ -13,7 +13,7 @@ export function AboutFinalCta() {
       title: t('finalBookTitle'),
       body: t('finalBookBody'),
       cta: t('finalBookCta'),
-      href: '/#booking',
+      href: BOOKING_HREF,
       variant: 'primary' as const,
       accent: true,
     },

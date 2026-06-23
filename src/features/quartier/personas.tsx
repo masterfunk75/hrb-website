@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
 import { Link } from '@/i18n/navigation';
+import { BOOKING_HREF } from '@/config/site';
 
 // Section « À qui ça parle » : 3 personas (weekend / corpo / événementiel).
 // Textes via i18n + href câblé ici (routing). Mêmes conventions que la home.
@@ -14,7 +15,7 @@ export function Personas() {
       title: t('persona1Title'),
       body: t('persona1Body'),
       cta: t('persona1Cta'),
-      href: '/#booking',
+      href: BOOKING_HREF,
     },
     {
       title: t('persona2Title'),
@@ -26,7 +27,7 @@ export function Personas() {
       title: t('persona3Title'),
       body: t('persona3Body'),
       cta: t('persona3Cta'),
-      href: '/#booking',
+      href: BOOKING_HREF,
     },
   ];
 

@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { BOOKING_HREF } from '@/config/site';
 
 // Hero de la page d'accueil. Photo en placeholder (pipeline photo en attente).
 export function Hero() {
@@ -17,7 +18,7 @@ export function Hero() {
           </h1>
           <p className="text-muted max-w-md text-lg">{t('heroSubtitle')}</p>
           <div className="flex flex-wrap gap-3">
-            <Button href="/#booking">{tNav('book')}</Button>
+            <Button href={BOOKING_HREF}>{tNav('book')}</Button>
             <Button href="/#pour-qui" variant="outline">
               {t('heroSecondaryCta')}
             </Button>

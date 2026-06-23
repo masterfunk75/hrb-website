@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
+import { BOOKING_HREF } from '@/config/site';
 
 // A9 — bandeau de clôture « Réservez en direct » (fond appuyé) + CTA.
 export function BookDirect() {
@@ -33,7 +34,7 @@ export function BookDirect() {
         </div>
 
         <div className="mt-12">
-          <Button href="/#booking" variant="light">
+          <Button href={BOOKING_HREF} variant="light">
             {tNav('book')}
           </Button>
         </div>
