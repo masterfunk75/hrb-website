@@ -12,7 +12,11 @@ export function DirectFaq({ locale }: Props) {
   const t = useTranslations('Direct');
 
   return (
-    <Section eyebrow={t('faqEyebrow')} title={t('faqTitle')}>
+    <Section
+      eyebrow={t('faqEyebrow')}
+      title={t('faqTitle')}
+      className="bg-surface"
+    >
       <Faq items={getDirectFaq(locale)} />
     </Section>
   );

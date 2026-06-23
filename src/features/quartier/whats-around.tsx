@@ -25,7 +25,7 @@ export function WhatsAround({ locale }: Props) {
       eyebrow={t('aroundEyebrow')}
       title={t('aroundTitle')}
       intro={t('aroundIntro')}
-      className="bg-surface scroll-mt-20"
+      className="scroll-mt-20"
     >
       {/* Carte (placeholder) + liste numérotée des 12 lieux */}
       <div className="grid items-start gap-8 md:grid-cols-2">

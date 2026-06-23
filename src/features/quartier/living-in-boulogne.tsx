@@ -7,7 +7,7 @@ export function LivingInBoulogne() {
   const t = useTranslations('Neighborhood');
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="bg-surface py-16 md:py-24">
       <Container className="grid items-center gap-10 md:grid-cols-2">
         <div className="flex flex-col gap-5">
           <span className="text-accent font-mono text-xs tracking-[0.2em] uppercase">

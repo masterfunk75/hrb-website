@@ -37,7 +37,7 @@ export function ContactDetails() {
             </div>
           ))}
         </dl>
-        <PhotoPlaceholder ratio="16/9" label={t('mapPhoto')} />
+        <PhotoPlaceholder ratio="4/3" label={t('mapPhoto')} />
       </div>
     </Section>
   );
