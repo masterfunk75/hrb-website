@@ -1,4 +1,5 @@
 import { setRequestLocale } from 'next-intl/server';
+import { Reveal } from '@/components/motion/reveal';
 import { Hero } from '@/features/home/hero';
 import { Booking } from '@/features/home/booking';
 import { WhyUs } from '@/features/home/why-us';
@@ -18,11 +19,21 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Hero />
-      <Booking />
-      <WhyUs />
-      <HomePersonas />
-      <Rooms />
-      <BookDirect />
+      <Reveal>
+        <Booking />
+      </Reveal>
+      <Reveal>
+        <WhyUs />
+      </Reveal>
+      <Reveal>
+        <HomePersonas />
+      </Reveal>
+      <Reveal>
+        <Rooms />
+      </Reveal>
+      <Reveal>
+        <BookDirect />
+      </Reveal>
     </>
   );
 }
