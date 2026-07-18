@@ -7,7 +7,7 @@ import { BOOKING_HREF } from '@/config/site';
 // Section « À qui ça parle » : 3 personas (weekend / corpo / événementiel).
 // Textes via i18n + href câblé ici (routing). Mêmes conventions que la home.
 // CTA événements repointés vers la réservation (page calendrier différée).
-export function Personas() {
+export function QuartierPersonas() {
   const t = useTranslations('Neighborhood');
 
   const items = [

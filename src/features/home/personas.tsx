@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Link } from '@/i18n/navigation';
 
 // A4 — « Pour qui ? » : 3 personas (pro / weekend / événement), chacun avec un CTA.
-export function Personas() {
+export function HomePersonas() {
   const t = useTranslations('Home');
 
   const items = [

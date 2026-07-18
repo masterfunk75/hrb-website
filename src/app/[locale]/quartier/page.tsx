@@ -5,7 +5,7 @@ import { WhatsAround } from '@/features/quartier/whats-around';
 import { BreathingBand } from '@/features/quartier/breathing-band';
 import { Addresses } from '@/features/quartier/addresses';
 import { Transport } from '@/features/quartier/transport';
-import { Personas } from '@/features/quartier/personas';
+import { QuartierPersonas } from '@/features/quartier/personas';
 import { QuartierCta } from '@/features/quartier/quartier-cta';
 
 type Props = {
@@ -25,7 +25,7 @@ export default async function QuartierPage({ params }: Props) {
       <BreathingBand />
       <Addresses locale={locale} />
       <Transport locale={locale} />
-      <Personas />
+      <QuartierPersonas />
       <QuartierCta />
     </>
   );
