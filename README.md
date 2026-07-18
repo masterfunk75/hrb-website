@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Boulogne Résidence Hôtel — site web
 
-## Getting Started
+Site vitrine bilingue (FR/EN) de **Boulogne Résidence Hôtel**, appart-hôtel à
+Boulogne-Billancourt. Refonte d'une maquette statique V2 en application
+**Next.js 16** production-ready.
 
-First, run the development server:
+**Statut : V1 complète.** 7 pages construites, bilingues, générées en statique
+(SSG), revue qualité passée. Différé : vraies photos (pipeline en cours), moteur
+de réservation Thaïs, quelques contenus propriétaire marqués « à confirmer ».
+
+## Stack
+
+- **Next.js 16** (App Router, segment `[locale]`) · **React 19** · **TypeScript strict**
+- **Tailwind CSS v4** (design tokens V1 en `@theme`)
+- **next-intl** (i18n FR/EN)
+- **Vitest** (tests unitaires) · **ESLint** (+ `eslint-plugin-boundaries`) · **Prettier** · **Husky**
+
+## Prérequis
+
+**Node 24** (LTS). La machine de dev utilise `nvm` ; le projet a un `.nvmrc` :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+nvm use            # active Node 24 (lit .nvmrc)
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Commandes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Commande            | Rôle                                               |
+| ------------------- | -------------------------------------------------- |
+| `npm run dev`       | Serveur de dev (Turbopack) — http://localhost:3000 |
+| `npm run build`     | Build de prod (compile + type-check + SSG)         |
+| `npm run start`     | Sert le build de prod                              |
+| `npm run lint`      | ESLint (dont frontières de couches)                |
+| `npm run format`    | Prettier (réécrit les fichiers)                    |
+| `npm run typecheck` | `tsc --noEmit`                                     |
+| `npm run test`      | Vitest (parité i18n, getters de contenu, utils)    |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Un hook **pre-commit** (Husky + lint-staged) bloque le commit si lint / format /
+type-check / tests échouent.
 
-## Learn More
+## Architecture
 
-To learn more about Next.js, take a look at the following resources:
+Architecture en couches à **sens unique** (imposée par `eslint-plugin-boundaries`) :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+app  →  features  →  components  →  hooks  →  lib  →  config / types
+                     (+ i18n / content comme couches socles)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├─ app/[locale]/       Routes (App Router). Couche de composition.
+├─ features/<page>/    Sections par page (home, rooms, quartier, espace-pro, …).
+├─ components/
+│  ├─ ui/              Primitives (Button, Card, Section, PhotoPlaceholder, Faq, …).
+│  └─ layout/          Header, Footer, PageHero, PageCta, CtaCards.
+├─ content/{fr,en}/    Contenu éditorial riche, typé (data-driven).
+├─ config/             Constantes du site (navigation, PHONE, BOOKING_HREF).
+├─ lib/ · hooks/ · types/
+└─ i18n/               Config next-intl (routing, navigation, request).
+messages/{fr,en}.json  Chaînes d'UI (nav, boutons, titres de section).
+```
 
-## Deploy on Vercel
+### i18n
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Deux niveaux : **chaînes d'UI** dans `messages/{fr,en}.json` ; **contenu
+  éditorial riche** dans `src/content/{fr,en}/`.
+- Navigation toujours via `@/i18n/navigation` (Links localisés `/fr`, `/en`).
+- Un test garantit la **parité des clés** FR/EN.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Conventions
+
+Voir **`CLAUDE.md`** (conventions détaillées, échelle anti-dette) et **`AGENTS.md`**
+(⚠️ Next 16 a des changements de rupture vs Next 15).
