@@ -22,15 +22,12 @@ export default async function HomePage({ params }: Props) {
       <Reveal>
         <Booking />
       </Reveal>
-      <Reveal>
-        <WhyUs />
-      </Reveal>
-      <Reveal>
-        <HomePersonas />
-      </Reveal>
-      <Reveal>
-        <Rooms />
-      </Reveal>
+      {/* Sections en grille : l'apparition est portée par le stagger interne
+          (cascade des cartes), pas par un <Reveal> de bloc — une seule
+          mécanique d'animation par élément, sans double fondu. */}
+      <WhyUs />
+      <HomePersonas />
+      <Rooms />
       <Reveal>
         <BookDirect />
       </Reveal>

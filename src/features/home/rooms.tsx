@@ -3,6 +3,7 @@ import { Section } from '@/components/ui/section';
 import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
+import { Stagger, StaggerItem } from '@/components/motion/stagger';
 
 // A5 — « Vos logements » : teaser de 4 catégories (photos en placeholder).
 export function Rooms() {
@@ -35,23 +36,28 @@ export function Rooms() {
     <Section eyebrow={t('roomsEyebrow')} title={t('roomsTitle')}>
       <p className="text-muted mb-10 max-w-2xl">{t('roomsIntro')}</p>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => (
-          <Link
-            key={item.name}
-            href="/chambres"
-            className="group flex flex-col gap-3"
-          >
-            <PhotoPlaceholder ratio="4/3" label={item.photo} />
-            <div>
-              <h3 className="font-display text-primary group-hover:text-accent text-lg transition-colors">
-                {item.name}
-              </h3>
-              <p className="text-muted text-sm">{item.pitch}</p>
-            </div>
-          </Link>
+          <StaggerItem key={item.name}>
+            {/* Carte entière cliquable : lift au survol + léger press signifient
+                l'action. Anneau de focus clavier : :focus-visible global. */}
+            <Link
+              href="/chambres"
+              className="group flex h-full flex-col gap-3 rounded-lg motion-safe:transition-transform motion-safe:hover:-translate-y-1 motion-safe:active:scale-[0.99]"
+            >
+              <PhotoPlaceholder ratio="4/3" label={item.photo} />
+              <div>
+                <h3 className="font-display text-primary group-hover:text-accent text-lg transition-colors">
+                  {item.name}
+                </h3>
+                <p className="text-muted text-sm leading-relaxed">
+                  {item.pitch}
+                </p>
+              </div>
+            </Link>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
 
       <div className="mt-10">
         <Button href="/chambres" variant="outline">
