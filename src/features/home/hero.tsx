@@ -25,7 +25,7 @@ export function Hero() {
           </div>
         </div>
         <PhotoPlaceholder
-          ratio="4/5"
+          ratioClass="aspect-[4/5] md:aspect-[16/9]"
           label="Hero — Studio Supérieur (acc_hero · BRH_148)"
         />
       </Container>
