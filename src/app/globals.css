@@ -32,3 +32,25 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
 }
+
+/* Accessibilité — anneau de focus clavier cohérent sur TOUS les éléments
+   interactifs (liens, boutons, champs). :focus-visible => visible au clavier
+   uniquement, pas au clic souris. L'outline suit le border-radius de l'élément. */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Respect de prefers-reduced-motion : neutralise transitions et animations
+   pour les utilisateurs qui préfèrent moins de mouvement (filet de sécurité
+   côté CSS, en complément de useReducedMotion pour Framer Motion). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
