@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 import { Link } from '@/i18n/navigation';
 import { isPlainAnchorHref } from '@/lib/href';
 
-type Variant = 'primary' | 'outline' | 'light' | 'outlineLight';
+export type ButtonVariant = 'primary' | 'outline' | 'light' | 'outlineLight';
 
-const variants: Record<Variant, string> = {
+const variants: Record<ButtonVariant, string> = {
   primary: 'bg-primary text-on-emphasis hover:bg-primary-hover',
   outline:
     'border border-line-strong text-ink hover:border-primary hover:text-primary',
@@ -16,7 +16,7 @@ const variants: Record<Variant, string> = {
 type ButtonProps = {
   href: string;
   children: ReactNode;
-  variant?: Variant;
+  variant?: ButtonVariant;
   className?: string;
 };
 
