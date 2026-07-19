@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
+import { Stagger, StaggerItem } from '@/components/motion/stagger';
 import { getAdvantages } from '@/content/business';
 
 type Props = {
@@ -14,16 +15,18 @@ export function BusinessAdvantages({ locale }: Props) {
 
   return (
     <Section eyebrow={t('advantagesEyebrow')} title={t('advantagesTitle')}>
-      <div className="grid gap-6 md:grid-cols-2">
+      <Stagger className="grid gap-6 md:grid-cols-2">
         {advantages.map((advantage) => (
-          <Card key={advantage.id}>
-            <h3 className="font-display text-primary text-xl">
-              {advantage.title}
-            </h3>
-            <p className="text-muted text-sm">{advantage.body}</p>
-          </Card>
+          <StaggerItem key={advantage.id} className="h-full">
+            <Card className="h-full">
+              <h3 className="font-display text-primary text-xl">
+                {advantage.title}
+              </h3>
+              <p className="text-muted text-sm">{advantage.body}</p>
+            </Card>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </Section>
   );
 }

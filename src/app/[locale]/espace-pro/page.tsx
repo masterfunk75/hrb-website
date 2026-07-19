@@ -1,5 +1,6 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { PhotoBand } from '@/components/ui/photo-band';
+import { Reveal } from '@/components/motion/reveal';
 import { BusinessHero } from '@/features/espace-pro/business-hero';
 import { BusinessIntro } from '@/features/espace-pro/business-intro';
 import { BusinessAdvantages } from '@/features/espace-pro/business-advantages';
@@ -16,6 +17,9 @@ type Props = {
 };
 
 // Page Espace Pro / Corporate — assemblée section par section (source : lot-2 corpo v2).
+// Motion : Reveal sur les blocs texte/bandeau/carte/FAQ ; les grilles (avantages,
+// séjours, conditions, CTA final) cascadent en interne. Le formulaire de devis
+// reste sans animation (interactions et focus sensibles).
 export default async function EspaceProPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -24,15 +28,25 @@ export default async function EspaceProPage({ params }: Props) {
   return (
     <>
       <BusinessHero />
-      <BusinessIntro />
+      <Reveal>
+        <BusinessIntro />
+      </Reveal>
       <BusinessAdvantages locale={locale} />
-      <PhotoBand label={t('bandPhoto')} />
+      <Reveal>
+        <PhotoBand label={t('bandPhoto')} />
+      </Reveal>
       <BusinessStayTypes locale={locale} />
       <BusinessConditions locale={locale} />
-      <BusinessMap locale={locale} />
+      <Reveal>
+        <BusinessMap locale={locale} />
+      </Reveal>
       <QuoteForm />
-      <BusinessCallDirect />
-      <BusinessFaq locale={locale} />
+      <Reveal>
+        <BusinessCallDirect />
+      </Reveal>
+      <Reveal>
+        <BusinessFaq locale={locale} />
+      </Reveal>
       <BusinessFinalCta />
     </>
   );
