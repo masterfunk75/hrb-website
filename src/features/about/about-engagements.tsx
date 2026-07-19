@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
+import { Stagger, StaggerItem } from '@/components/motion/stagger';
 import { getAboutEngagements } from '@/content/about';
 
 type Props = {
@@ -19,19 +20,21 @@ export function AboutEngagements({ locale }: Props) {
       intro={t('engagementsIntro')}
       className="bg-surface"
     >
-      <div className="grid gap-6 md:grid-cols-3">
+      <Stagger className="grid gap-6 md:grid-cols-3">
         {engagements.map((engagement) => (
-          <Card key={engagement.num}>
-            <span className="font-display text-accent text-4xl">
-              {engagement.num}
-            </span>
-            <h3 className="font-display text-primary text-xl">
-              {engagement.title}
-            </h3>
-            <p className="text-muted text-sm">{engagement.body}</p>
-          </Card>
+          <StaggerItem key={engagement.num} className="h-full">
+            <Card className="h-full">
+              <span className="font-display text-accent text-4xl">
+                {engagement.num}
+              </span>
+              <h3 className="font-display text-primary text-xl">
+                {engagement.title}
+              </h3>
+              <p className="text-muted text-sm">{engagement.body}</p>
+            </Card>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </Section>
   );
 }
