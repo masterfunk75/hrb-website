@@ -25,6 +25,8 @@ import {
   getAmenityGroups,
   getRoomRecommendations,
 } from '@/content/rooms-extras';
+import { getLegalDoc } from '@/content/legal';
+import type { LegalKey } from '@/types/legal';
 
 // Comptes attendus par getter (source = contenus lot-2/lot-3).
 const EXPECTED_COUNTS = [
@@ -103,5 +105,33 @@ describe('intégrité des données', () => {
         expect(row.values).toHaveLength(cols);
       }
     }
+  });
+});
+
+describe('documents légaux — parité et intégrité', () => {
+  const keys: LegalKey[] = ['mentionsLegales', 'confidentialite', 'cookies'];
+
+  for (const key of keys) {
+    it(`${key} : même nombre de sections en FR et EN`, () => {
+      expect(getLegalDoc('en', key).sections.length).toBe(
+        getLegalDoc('fr', key).sections.length,
+      );
+    });
+
+    it(`${key} : sections non vides (titre + au moins un paragraphe)`, () => {
+      for (const locale of ['fr', 'en']) {
+        const doc = getLegalDoc(locale, key);
+        expect(doc.sections.length).toBeGreaterThan(0);
+        expect(doc.updated.length).toBeGreaterThan(0);
+        for (const section of doc.sections) {
+          expect(section.heading.length).toBeGreaterThan(0);
+          expect(section.paragraphs.length).toBeGreaterThan(0);
+        }
+      }
+    });
+  }
+
+  it('langue inconnue retombe sur le FR (défaut)', () => {
+    expect(getLegalDoc('xx', 'cookies')).toEqual(getLegalDoc('fr', 'cookies'));
   });
 });

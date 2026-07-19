@@ -14,7 +14,18 @@
     "aboutTitle": "À propos",
     "aboutDescription": "Un appart-hôtel indépendant à Boulogne-Billancourt : notre adresse, notre approche et nos engagements.",
     "contactTitle": "Contact",
-    "contactDescription": "Adresse, téléphone et horaires de la réception du Boulogne Résidence Hôtel, à Boulogne-Billancourt."
+    "contactDescription": "Adresse, téléphone et horaires de la réception du Boulogne Résidence Hôtel, à Boulogne-Billancourt.",
+    "mentionsLegalesTitle": "Mentions légales",
+    "mentionsLegalesDescription": "Mentions légales du site Boulogne Résidence Hôtel : éditeur, hébergeur, propriété intellectuelle.",
+    "confidentialiteTitle": "Politique de confidentialité",
+    "confidentialiteDescription": "Comment vos données personnelles sont traitées sur le site Boulogne Résidence Hôtel (RGPD).",
+    "cookiesTitle": "Cookies",
+    "cookiesDescription": "Les cookies utilisés par le site Boulogne Résidence Hôtel et comment les gérer."
+  },
+  "Legal": {
+    "eyebrow": "Informations légales",
+    "updatedLabel": "Dernière mise à jour :",
+    "validationNotice": "Contenu provisoire à faire valider : les mentions marquées « [à confirmer] » doivent être complétées et l’ensemble vérifié par le responsable de l’établissement (et, si besoin, un conseil juridique) avant la mise en ligne."
   },
   "Nav": {
     "home": "Accueil",
@@ -31,14 +42,18 @@
     "brandKind": "Appart-hôtel",
     "mainNavLabel": "Navigation principale",
     "mobileNavLabel": "Navigation mobile",
-    "skipToContent": "Aller au contenu"
+    "skipToContent": "Aller au contenu",
+    "legalNotice": "Mentions légales",
+    "privacy": "Confidentialité",
+    "cookies": "Cookies"
   },
   "Footer": {
     "tagline": "Appart-hôtel à Boulogne-Billancourt. Quelques nuits ou plusieurs mois.",
     "address": "32 rue des Longs Prés, 92100 Boulogne-Billancourt",
     "rights": "Boulogne Résidence Hôtel. Tous droits réservés.",
     "navLabel": "Navigation du pied de page",
-    "navSecondaryLabel": "Liens secondaires"
+    "navSecondaryLabel": "Liens secondaires",
+    "legalLabel": "Informations légales"
   },
   "Home": {
     "heroTitle": "Appart-hôtel à Boulogne. Pour bosser, pour Paris.",

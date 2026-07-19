@@ -14,7 +14,18 @@
     "aboutTitle": "About",
     "aboutDescription": "An independent aparthotel in Boulogne-Billancourt: our address, our approach and our commitments.",
     "contactTitle": "Contact",
-    "contactDescription": "Address, phone and reception hours for Boulogne Résidence Hôtel in Boulogne-Billancourt."
+    "contactDescription": "Address, phone and reception hours for Boulogne Résidence Hôtel in Boulogne-Billancourt.",
+    "mentionsLegalesTitle": "Legal notice",
+    "mentionsLegalesDescription": "Legal notice for the Boulogne Résidence Hôtel website: publisher, host, intellectual property.",
+    "confidentialiteTitle": "Privacy policy",
+    "confidentialiteDescription": "How your personal data is processed on the Boulogne Résidence Hôtel website (GDPR).",
+    "cookiesTitle": "Cookies",
+    "cookiesDescription": "The cookies used by the Boulogne Résidence Hôtel website and how to manage them."
+  },
+  "Legal": {
+    "eyebrow": "Legal information",
+    "updatedLabel": "Last updated:",
+    "validationNotice": "Provisional content pending review: the items marked “[to confirm]” must be completed and the whole checked by the establishment’s manager (and legal counsel if needed) before going live."
   },
   "Nav": {
     "home": "Home",
@@ -31,14 +42,18 @@
     "brandKind": "Aparthotel",
     "mainNavLabel": "Main navigation",
     "mobileNavLabel": "Mobile navigation",
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "legalNotice": "Legal notice",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
   },
   "Footer": {
     "tagline": "Aparthotel in Boulogne-Billancourt. A few nights or several months.",
     "address": "32 rue des Longs Prés, 92100 Boulogne-Billancourt",
     "rights": "Boulogne Résidence Hôtel. All rights reserved.",
     "navLabel": "Footer navigation",
-    "navSecondaryLabel": "Secondary links"
+    "navSecondaryLabel": "Secondary links",
+    "legalLabel": "Legal information"
   },
   "Home": {
     "heroTitle": "An aparthotel in Boulogne. For work, for Paris.",

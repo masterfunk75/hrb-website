@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { mainNav, secondaryNav } from '@/config/navigation';
+import { mainNav, secondaryNav, legalNav } from '@/config/navigation';
 import { PHONE } from '@/config/site';
 
 // Pied de page global du site (Server Component).
@@ -55,8 +55,24 @@ export function Footer() {
       </div>
 
       <div className="border-on-emphasis/10 border-t">
-        <div className="text-on-emphasis/60 mx-auto max-w-7xl px-6 py-4 text-xs">
-          © {year} {t('rights')}
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-4 text-xs sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-on-emphasis/60">
+            © {year} {t('rights')}
+          </p>
+          <nav
+            className="flex flex-wrap gap-x-5 gap-y-2"
+            aria-label={t('legalLabel')}
+          >
+            {legalNav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-on-emphasis/60 hover:text-on-emphasis transition-colors"
+              >
+                {tNav(item.labelKey)}
+              </Link>
+            ))}
+          </nav>
         </div>
       </div>
     </footer>

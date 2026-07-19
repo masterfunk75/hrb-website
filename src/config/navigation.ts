@@ -21,3 +21,10 @@ export const secondaryNav: NavItem[] = [
   { href: '/a-propos', labelKey: 'about' },
   { href: '/contact', labelKey: 'contact' },
 ];
+
+/** Liens légaux (bas du pied de page). */
+export const legalNav: NavItem[] = [
+  { href: '/mentions-legales', labelKey: 'legalNotice' },
+  { href: '/confidentialite', labelKey: 'privacy' },
+  { href: '/cookies', labelKey: 'cookies' },
+];

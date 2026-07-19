@@ -27,6 +27,9 @@ export const PAGE_PATHS = {
   direct: '/pourquoi-direct',
   about: '/a-propos',
   contact: '/contact',
+  mentionsLegales: '/mentions-legales',
+  confidentialite: '/confidentialite',
+  cookies: '/cookies',
 } as const;
 
 export type PageKey = keyof typeof PAGE_PATHS;
