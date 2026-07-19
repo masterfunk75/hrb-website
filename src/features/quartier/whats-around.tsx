@@ -2,11 +2,12 @@ import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
 import { PoiList } from '@/components/ui/poi-list';
 import { Stagger, StaggerItem } from '@/components/motion/stagger';
 import { getPois, getEventCategories } from '@/content/neighborhood';
 import { BOOKING_HREF } from '@/config/site';
+import { QUARTIER_MAP_SRC } from '@/config/photos';
 
 type Props = {
   locale: string;
@@ -32,7 +33,12 @@ export function WhatsAround({ locale }: Props) {
       {/* Carte (placeholder) + liste numérotée des 12 lieux */}
       <div className="grid items-start gap-8 md:grid-cols-2">
         <div>
-          <PhotoPlaceholder ratio="4/3" label={t('mapPhoto')} />
+          <Photo
+            src={QUARTIER_MAP_SRC}
+            alt={t('mapPhoto')}
+            ratio="4/3"
+            fit="contain"
+          />
           <p className="text-muted mt-2 text-sm">{t('mapCaption')}</p>
         </div>
         <PoiList pois={pois} />

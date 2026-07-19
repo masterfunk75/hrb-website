@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { pageMetadata } from '@/features/seo/page-metadata';
+import { photoSrc } from '@/config/photos';
 import { PhotoBand } from '@/components/ui/photo-band';
 import { Reveal } from '@/components/motion/reveal';
 import { DirectHero } from '@/features/pourquoi-direct/direct-hero';
@@ -33,7 +34,7 @@ export default async function PourquoiDirectPage({ params }: Props) {
       <DirectHero />
       <DirectPillars locale={locale} />
       <Reveal>
-        <PhotoBand label={t('bandPhoto')} />
+        <PhotoBand src={photoSrc('petitDejeuner')} alt={t('bandPhoto')} />
       </Reveal>
       <DirectEngagements locale={locale} />
       <Reveal>

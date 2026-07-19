@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { pageMetadata } from '@/features/seo/page-metadata';
+import { photoSrc } from '@/config/photos';
 import { PhotoBand } from '@/components/ui/photo-band';
 import { Reveal } from '@/components/motion/reveal';
 import { BusinessHero } from '@/features/espace-pro/business-hero';
@@ -40,7 +41,7 @@ export default async function EspaceProPage({ params }: Props) {
       </Reveal>
       <BusinessAdvantages locale={locale} />
       <Reveal>
-        <PhotoBand label={t('bandPhoto')} />
+        <PhotoBand src={photoSrc('lifestyle')} alt={t('bandPhoto')} />
       </Reveal>
       <BusinessStayTypes locale={locale} />
       <BusinessConditions locale={locale} />

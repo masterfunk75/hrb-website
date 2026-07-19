@@ -1,7 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
+import { photoSrc } from '@/config/photos';
 import { Stagger, StaggerItem } from '@/components/motion/stagger';
 import { getEngagements } from '@/content/direct';
 
@@ -21,7 +22,11 @@ export function DirectEngagements({ locale }: Props) {
       intro={t('engagementsIntro')}
     >
       <div className="grid items-start gap-8 lg:grid-cols-[2fr_3fr]">
-        <PhotoPlaceholder ratio="4/5" label={t('engagementsPhoto')} />
+        <Photo
+          src={photoSrc('espacesCommuns')}
+          alt={t('engagementsPhoto')}
+          ratio="4/5"
+        />
         {/* Cards empilées : cascade au scroll (la photo reste fixe). */}
         <Stagger className="flex flex-col gap-4">
           {engagements.map((engagement) => (

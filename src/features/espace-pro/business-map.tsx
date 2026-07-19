@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
+import { QUARTIER_MAP_SRC } from '@/config/photos';
 import { PoiList } from '@/components/ui/poi-list';
 import { getBusinessPois } from '@/content/business';
 
@@ -22,7 +23,12 @@ export function BusinessMap({ locale }: Props) {
       className="bg-surface"
     >
       <div className="grid items-start gap-8 md:grid-cols-2">
-        <PhotoPlaceholder ratio="4/3" label={t('mapPhoto')} />
+        <Photo
+          src={QUARTIER_MAP_SRC}
+          alt={t('mapPhoto')}
+          ratio="4/3"
+          fit="contain"
+        />
         <PoiList pois={pois} />
       </div>
     </Section>

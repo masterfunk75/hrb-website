@@ -1,9 +1,10 @@
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
 import { Stagger, StaggerItem } from '@/components/motion/stagger';
 import { getStayTypes } from '@/content/business';
+import { photoSrc } from '@/config/photos';
 
 type Props = {
   locale: string;
@@ -24,10 +25,13 @@ export function BusinessStayTypes({ locale }: Props) {
         {stayTypes.map((stay) => (
           <StaggerItem key={stay.num} className="h-full">
             <Card className="h-full gap-0 overflow-hidden p-0">
-              <PhotoPlaceholder
+              <Photo
+                src={photoSrc(
+                  stay.num === '01' ? 'proMissionCourte' : 'proSejourLong',
+                )}
+                alt={stay.title}
                 ratio="3/4"
-                label={stay.photoLabel}
-                className="rounded-none border-0"
+                className="rounded-none"
               />
               <div className="flex flex-col gap-2 p-6">
                 <span className="font-display text-accent text-3xl">

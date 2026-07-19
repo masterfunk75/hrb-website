@@ -14,6 +14,9 @@ type PhotoProps = {
   priority?: boolean;
   /** Indice de tailles pour l'optimisation next/image. */
   sizes?: string;
+  /** Ajustement : "cover" (défaut) rogne pour remplir ; "contain" affiche tout
+   *  sans rogner (ex. une carte/illustration). */
+  fit?: 'cover' | 'contain';
 };
 
 // Photo optimisée (next/image) dans un cadre au ratio voulu : remplissage +
@@ -26,6 +29,7 @@ export function Photo({
   className,
   priority = false,
   sizes = '(max-width: 768px) 100vw, 50vw',
+  fit = 'cover',
 }: PhotoProps) {
   return (
     <div
@@ -38,7 +42,7 @@ export function Photo({
         fill
         sizes={sizes}
         priority={priority}
-        className="object-cover"
+        className={fit === 'contain' ? 'object-contain' : 'object-cover'}
       />
     </div>
   );

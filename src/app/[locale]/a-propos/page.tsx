@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { pageMetadata } from '@/features/seo/page-metadata';
+import { photoSrc } from '@/config/photos';
 import { PhotoBand } from '@/components/ui/photo-band';
 import { Reveal } from '@/components/motion/reveal';
 import { AboutHero } from '@/features/about/about-hero';
@@ -37,7 +38,7 @@ export default async function AProposPage({ params }: Props) {
         <AboutApproach />
       </Reveal>
       <Reveal>
-        <PhotoBand label={t('bandPhoto')} />
+        <PhotoBand src={photoSrc('espacesCommuns')} alt={t('bandPhoto')} />
       </Reveal>
       <AboutEngagements locale={locale} />
       <Reveal>

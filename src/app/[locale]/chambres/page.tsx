@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { pageMetadata } from '@/features/seo/page-metadata';
+import { photoSrc } from '@/config/photos';
 import { PhotoBand } from '@/components/ui/photo-band';
 import { Reveal } from '@/components/motion/reveal';
 import { RoomsHero } from '@/features/rooms/rooms-hero';
@@ -39,7 +40,7 @@ export default async function RoomsPage({ params }: Props) {
       <RoomsSummary locale={locale} />
       <RoomsCategories locale={locale} />
       <Reveal>
-        <PhotoBand label={t('bandPhoto')} />
+        <PhotoBand src={photoSrc('chambresBand')} alt={t('bandPhoto')} />
       </Reveal>
       <Reveal>
         <RoomsComparison locale={locale} />

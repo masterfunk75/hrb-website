@@ -1,8 +1,9 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
 import { Button } from '@/components/ui/button';
 import { BOOKING_HREF } from '@/config/site';
+import { photoSrc, ROOM_PHOTO_BY_ID } from '@/config/photos';
 import type { RoomCategory as RoomCategoryType } from '@/types/rooms';
 
 type Props = {
@@ -21,7 +22,11 @@ export function RoomCategory({ category, reverse = false }: Props) {
     >
       <Container className="grid items-start gap-10 md:grid-cols-2">
         <div className={reverse ? 'md:order-2' : undefined}>
-          <PhotoPlaceholder ratio="4/3" label={category.photoLabel} />
+          <Photo
+            src={photoSrc(ROOM_PHOTO_BY_ID[category.id])}
+            alt={category.name}
+            ratio="4/3"
+          />
         </div>
 
         <div className={reverse ? 'md:order-1' : undefined}>

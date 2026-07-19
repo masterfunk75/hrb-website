@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
+import { photoSrc } from '@/config/photos';
 
 // §2 « Notre adresse » — 2 colonnes (texte + photo 4:5).
 export function AboutAddress() {
@@ -22,7 +23,11 @@ export function AboutAddress() {
             {t('addressSignature')}
           </p>
         </div>
-        <PhotoPlaceholder ratio="4/5" label={t('addressPhoto')} />
+        <Photo
+          src={photoSrc('quartierExterieur')}
+          alt={t('addressPhoto')}
+          ratio="4/5"
+        />
       </Container>
     </section>
   );

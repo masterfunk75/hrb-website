@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
+import { photoSrc } from '@/config/photos';
 
 // Section « Vivre à Boulogne » — 2 colonnes (texte + photo 4:5), empilé en mobile.
 export function LivingInBoulogne() {
@@ -19,7 +20,7 @@ export function LivingInBoulogne() {
           <p className="text-muted text-lg">{t('livingBody1')}</p>
           <p className="text-muted">{t('livingBody2')}</p>
         </div>
-        <PhotoPlaceholder ratio="4/5" label={t('livingPhoto')} />
+        <Photo src={photoSrc('lifestyle')} alt={t('livingPhoto')} ratio="4/5" />
       </Container>
     </section>
   );

@@ -1,8 +1,9 @@
 import { useTranslations } from 'next-intl';
 import type { ReactNode } from 'react';
 import { Section } from '@/components/ui/section';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
 import { PHONE } from '@/config/site';
+import { QUARTIER_MAP_SRC } from '@/config/photos';
 
 // Coordonnées : adresse, téléphone, horaires, accès + plan (placeholder).
 export function ContactDetails() {
@@ -35,7 +36,12 @@ export function ContactDetails() {
             </div>
           ))}
         </dl>
-        <PhotoPlaceholder ratio="4/3" label={t('mapPhoto')} />
+        <Photo
+          src={QUARTIER_MAP_SRC}
+          alt={t('mapPhoto')}
+          ratio="4/3"
+          fit="contain"
+        />
       </div>
     </Section>
   );

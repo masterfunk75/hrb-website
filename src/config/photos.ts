@@ -25,6 +25,8 @@ export const PHOTOS = {
   // Espace pro
   proMissionCourte: 'BRH_066',
   proSejourLong: 'BRH_102',
+  // À propos
+  aproposEquipe: 'BRH_076',
   // Ambiance — emplacements sans photo dédiée dans le livrable
   lifestyle: 'BRH_073',
   espacesCommuns: 'BRH_016',

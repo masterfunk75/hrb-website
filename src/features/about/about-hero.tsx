@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { PageHero } from '@/components/layout/page-hero';
+import { photoSrc } from '@/config/photos';
 import { Button } from '@/components/ui/button';
 import { BOOKING_HREF } from '@/config/site';
 
@@ -12,7 +13,9 @@ export function AboutHero() {
       eyebrow={t('heroEyebrow')}
       title={t('heroTitle')}
       subtitle={t('heroSubtitle')}
-      photoLabel={t('heroPhoto')}
+      photoSrc={photoSrc('aproposHero')}
+      photoAlt={t('heroPhoto')}
+      photoPriority
     >
       <Button href={BOOKING_HREF}>{tNav('book')}</Button>
       <Button href="/contact" variant="outline">

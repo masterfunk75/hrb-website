@@ -1,13 +1,18 @@
 import type { ReactNode } from 'react';
 import { Container } from '@/components/ui/container';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
 
 type PageHeroProps = {
   eyebrow: string;
   title: string;
   subtitle: string;
-  photoLabel: string;
+  /** Chemin de la photo du hero (voir config/photos). */
+  photoSrc: string;
+  /** Texte alternatif de la photo. */
+  photoAlt: string;
   photoRatio?: string;
+  /** true si c'est l'image LCP de la page (désactive le lazy-loading). */
+  photoPriority?: boolean;
   /** CTAs optionnels. */
   children?: ReactNode;
 };
@@ -17,8 +22,10 @@ export function PageHero({
   eyebrow,
   title,
   subtitle,
-  photoLabel,
+  photoSrc,
+  photoAlt,
   photoRatio = '4/5',
+  photoPriority = false,
   children,
 }: PageHeroProps) {
   return (
@@ -36,7 +43,13 @@ export function PageHero({
             <div className="flex flex-wrap gap-3">{children}</div>
           ) : null}
         </div>
-        <PhotoPlaceholder ratio={photoRatio} label={photoLabel} />
+        <Photo
+          src={photoSrc}
+          alt={photoAlt}
+          ratio={photoRatio}
+          priority={photoPriority}
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </Container>
     </section>
   );

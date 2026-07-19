@@ -1,20 +1,25 @@
-import { PhotoPlaceholder } from './photo-placeholder';
+import { Photo } from './photo';
 
 type Props = {
-  label: string;
+  /** Chemin de la photo (voir config/photos). */
+  src: string;
+  /** Texte alternatif. */
+  alt: string;
   /** Ratio paysage, défaut 3:1. */
   ratio?: string;
 };
 
-// Bandeau photo pleine largeur (respiration entre deux sections). Photo différée
-// → PhotoPlaceholder full-bleed (sans coins arrondis ni bords latéraux).
-export function PhotoBand({ label, ratio = '3/1' }: Props) {
+// Bandeau photo pleine largeur (respiration entre deux sections) — sans coins
+// arrondis, sur toute la largeur.
+export function PhotoBand({ src, alt, ratio = '3/1' }: Props) {
   return (
     <section>
-      <PhotoPlaceholder
+      <Photo
+        src={src}
+        alt={alt}
         ratio={ratio}
-        label={label}
-        className="rounded-none border-x-0"
+        sizes="100vw"
+        className="rounded-none"
       />
     </section>
   );
