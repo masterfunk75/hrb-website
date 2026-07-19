@@ -62,12 +62,12 @@
 
     "bookingEyebrow": "Réserver",
     "bookingTitle": "Réservez en direct. Meilleur tarif garanti.",
-    "bookingIntro": "Choisissez vos dates — le moteur de réservation arrive bientôt. En attendant, réservez par téléphone, c'est immédiat.",
-    "bookingArrival": "Arrivée",
-    "bookingDeparture": "Départ",
-    "bookingGuests": "Voyageurs",
+    "bookingIntro": "Choisissez vos dates ci-dessous et réservez en direct, au meilleur tarif garanti.",
+    "bookingDirect": "Réserver sur le moteur sécurisé",
+    "bookingWidgetLoading": "Chargement du calendrier de disponibilités…",
+    "bookingWidgetUnavailable": "Réservation en ligne disponible via le bouton ci-dessous.",
     "bookingCta": "Réserver par téléphone",
-    "bookingNote": "Moteur de réservation en ligne en cours d'intégration.",
+    "bookingNote": "Réservation sécurisée D-EDGE. Meilleur tarif garanti en direct, sans intermédiaire.",
 
     "whyEyebrow": "Pourquoi nous",
     "whyTitle": "Trois choses à savoir avant de réserver.",

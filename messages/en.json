@@ -62,12 +62,12 @@
 
     "bookingEyebrow": "Book",
     "bookingTitle": "Book direct. Best rate guaranteed.",
-    "bookingIntro": "Pick your dates — the booking engine is coming soon. In the meantime, book by phone, it's instant.",
-    "bookingArrival": "Arrival",
-    "bookingDeparture": "Departure",
-    "bookingGuests": "Guests",
+    "bookingIntro": "Pick your dates below and book direct, at the best rate guaranteed.",
+    "bookingDirect": "Open the secure booking engine",
+    "bookingWidgetLoading": "Loading the availability calendar…",
+    "bookingWidgetUnavailable": "Online booking available via the button below.",
     "bookingCta": "Book by phone",
-    "bookingNote": "Online booking engine being integrated.",
+    "bookingNote": "Secure booking via D-EDGE. Best rate guaranteed when you book direct, with no middleman.",
 
     "whyEyebrow": "Why us",
     "whyTitle": "Three things to know before you book.",

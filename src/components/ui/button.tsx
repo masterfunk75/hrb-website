@@ -18,6 +18,8 @@ type ButtonProps = {
   children: ReactNode;
   variant?: ButtonVariant;
   className?: string;
+  /** Ouvre le lien dans un nouvel onglet (ex. moteur de réservation externe). */
+  newTab?: boolean;
 };
 
 // CTA stylé. href interne → Link next-intl (localisé /fr, /en) ;
@@ -28,21 +30,27 @@ export function Button({
   children,
   variant = 'primary',
   className,
+  newTab = false,
 }: ButtonProps) {
   // transition (couleur + transform) + léger press au clic. L'anneau de focus
   // clavier est géré globalement (:focus-visible dans globals.css).
   const classes = `inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium transition duration-200 motion-safe:active:scale-[0.98] ${variants[variant]} ${className ?? ''}`;
 
+  // rel="noopener noreferrer" obligatoire avec target="_blank" (sécurité).
+  const newTabProps = newTab
+    ? { target: '_blank', rel: 'noopener noreferrer' }
+    : {};
+
   if (isPlainAnchorHref(href)) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} {...newTabProps}>
         {children}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} className={classes} {...newTabProps}>
       {children}
     </Link>
   );
