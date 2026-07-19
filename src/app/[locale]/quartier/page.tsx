@@ -1,4 +1,5 @@
 import { setRequestLocale } from 'next-intl/server';
+import { Reveal } from '@/components/motion/reveal';
 import { QuartierHero } from '@/features/quartier/quartier-hero';
 import { LivingInBoulogne } from '@/features/quartier/living-in-boulogne';
 import { WhatsAround } from '@/features/quartier/whats-around';
@@ -13,6 +14,8 @@ type Props = {
 };
 
 // Page Le Quartier — assemblée section par section (source : lot-2 quartier v2).
+// Motion : Reveal sur les blocs (2-col, bandeau, CTA) ; les grilles de cartes
+// (événements, adresses, transports, personas) cascadent en interne.
 export default async function QuartierPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -20,13 +23,19 @@ export default async function QuartierPage({ params }: Props) {
   return (
     <>
       <QuartierHero />
-      <LivingInBoulogne />
+      <Reveal>
+        <LivingInBoulogne />
+      </Reveal>
       <WhatsAround locale={locale} />
-      <BreathingBand />
+      <Reveal>
+        <BreathingBand />
+      </Reveal>
       <Addresses locale={locale} />
       <Transport locale={locale} />
       <QuartierPersonas />
-      <QuartierCta />
+      <Reveal>
+        <QuartierCta />
+      </Reveal>
     </>
   );
 }

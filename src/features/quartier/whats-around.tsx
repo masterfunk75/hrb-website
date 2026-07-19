@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
 import { PoiList } from '@/components/ui/poi-list';
+import { Stagger, StaggerItem } from '@/components/motion/stagger';
 import { getPois, getEventCategories } from '@/content/neighborhood';
 import { BOOKING_HREF } from '@/config/site';
 
@@ -37,23 +38,25 @@ export function WhatsAround({ locale }: Props) {
         <PoiList pois={pois} />
       </div>
 
-      {/* 4 catégories d'événements (cards texte) */}
-      <div className="mt-14 grid gap-6 md:grid-cols-2">
+      {/* 4 catégories d'événements (cards texte) — apparition en cascade */}
+      <Stagger className="mt-14 grid gap-6 md:grid-cols-2">
         {categories.map((cat) => (
-          <Card key={cat.id}>
-            <h3 className="font-display text-primary text-xl">{cat.title}</h3>
-            <p className="text-muted text-sm italic">{cat.intro}</p>
-            <ul className="mt-2 flex flex-col gap-3 text-sm">
-              {cat.venues.map((venue) => (
-                <li key={venue.name}>
-                  <span className="text-ink font-medium">{venue.name}</span>
-                  <span className="text-muted"> — {venue.description}</span>
-                </li>
-              ))}
-            </ul>
-          </Card>
+          <StaggerItem key={cat.id} className="h-full">
+            <Card className="h-full">
+              <h3 className="font-display text-primary text-xl">{cat.title}</h3>
+              <p className="text-muted text-sm italic">{cat.intro}</p>
+              <ul className="mt-2 flex flex-col gap-3 text-sm">
+                {cat.venues.map((venue) => (
+                  <li key={venue.name}>
+                    <span className="text-ink font-medium">{venue.name}</span>
+                    <span className="text-muted"> — {venue.description}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
 
       <div className="mt-10">
         <Button href={BOOKING_HREF}>{tNav('book')}</Button>
