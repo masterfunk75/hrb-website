@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
+import { Stagger, StaggerItem } from '@/components/motion/stagger';
 import { getPillars } from '@/content/direct';
 
 type Props = {
@@ -18,19 +19,21 @@ export function DirectPillars({ locale }: Props) {
       title={t('pillarsTitle')}
       className="bg-surface"
     >
-      <div className="grid gap-6 md:grid-cols-3">
+      <Stagger className="grid gap-6 md:grid-cols-3">
         {pillars.map((pillar) => (
-          <Card key={pillar.id}>
-            <h3 className="font-display text-primary text-xl">
-              {pillar.title}
-            </h3>
-            <p className="text-muted text-sm">{pillar.body}</p>
-            <p className="text-accent mt-auto pt-3 font-mono text-xs tracking-[0.15em] uppercase">
-              {pillar.claim}
-            </p>
-          </Card>
+          <StaggerItem key={pillar.id} className="h-full">
+            <Card className="h-full">
+              <h3 className="font-display text-primary text-xl">
+                {pillar.title}
+              </h3>
+              <p className="text-muted text-sm">{pillar.body}</p>
+              <p className="text-accent mt-auto pt-3 font-mono text-xs tracking-[0.15em] uppercase">
+                {pillar.claim}
+              </p>
+            </Card>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </Section>
   );
 }
