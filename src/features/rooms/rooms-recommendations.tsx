@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
+import { Stagger, StaggerItem } from '@/components/motion/stagger';
 import { getRoomRecommendations } from '@/content/rooms-extras';
 import { PHONE } from '@/config/site';
 
@@ -20,34 +21,38 @@ export function RoomsRecommendations({ locale }: Props) {
       intro={t('recoIntro')}
       className="bg-surface"
     >
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <Stagger className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {recommendations.map((reco) => (
-          <Card key={reco.id}>
-            <h3 className="font-display text-primary text-lg">{reco.title}</h3>
-            <dl className="mt-1 flex flex-col gap-3 text-sm">
-              {reco.lines.map((line) => (
-                <div key={line.label}>
-                  <dt className="text-muted text-xs tracking-wide uppercase">
-                    {line.label}
-                  </dt>
-                  <dd className="text-ink">{line.value}</dd>
-                </div>
-              ))}
-            </dl>
-            {reco.contactNote && (
-              <p className="text-muted mt-auto pt-3 text-sm">
-                {reco.contactNote}{' '}
-                <a
-                  href={PHONE.href}
-                  className="text-accent hover:text-primary font-medium"
-                >
-                  {PHONE.display}
-                </a>
-              </p>
-            )}
-          </Card>
+          <StaggerItem key={reco.id} className="h-full">
+            <Card className="h-full">
+              <h3 className="font-display text-primary text-lg">
+                {reco.title}
+              </h3>
+              <dl className="mt-1 flex flex-col gap-3 text-sm">
+                {reco.lines.map((line) => (
+                  <div key={line.label}>
+                    <dt className="text-muted text-xs tracking-wide uppercase">
+                      {line.label}
+                    </dt>
+                    <dd className="text-ink">{line.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              {reco.contactNote && (
+                <p className="text-muted mt-auto pt-3 text-sm">
+                  {reco.contactNote}{' '}
+                  <a
+                    href={PHONE.href}
+                    className="text-accent hover:text-primary font-medium"
+                  >
+                    {PHONE.display}
+                  </a>
+                </p>
+              )}
+            </Card>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </Section>
   );
 }
