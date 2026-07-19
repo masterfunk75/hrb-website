@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/features/seo/page-metadata';
 import { PhotoBand } from '@/components/ui/photo-band';
 import { Reveal } from '@/components/motion/reveal';
 import { AboutHero } from '@/features/about/about-hero';
@@ -11,6 +13,11 @@ import { AboutFinalCta } from '@/features/about/about-final-cta';
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale, 'about');
+}
 
 // Page À propos — assemblée section par section (source : lot-2 a-propos v2).
 // Motion : Reveal sur les blocs (adresse, approche, bandeau, équipe) ; les

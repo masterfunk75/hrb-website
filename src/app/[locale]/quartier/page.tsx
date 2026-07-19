@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/features/seo/page-metadata';
 import { Reveal } from '@/components/motion/reveal';
 import { QuartierHero } from '@/features/quartier/quartier-hero';
 import { LivingInBoulogne } from '@/features/quartier/living-in-boulogne';
@@ -12,6 +14,11 @@ import { QuartierCta } from '@/features/quartier/quartier-cta';
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale, 'neighborhood');
+}
 
 // Page Le Quartier — assemblée section par section (source : lot-2 quartier v2).
 // Motion : Reveal sur les blocs (2-col, bandeau, CTA) ; les grilles de cartes

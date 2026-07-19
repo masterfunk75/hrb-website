@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/features/seo/page-metadata';
 import { Reveal } from '@/components/motion/reveal';
 import { Hero } from '@/features/home/hero';
 import { Booking } from '@/features/home/booking';
@@ -10,6 +12,11 @@ import { BookDirect } from '@/features/home/book-direct';
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale, 'home');
+}
 
 // Page d'accueil — assemblée section par section.
 export default async function HomePage({ params }: Props) {

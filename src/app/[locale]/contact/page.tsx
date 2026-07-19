@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
+import { pageMetadata } from '@/features/seo/page-metadata';
 import { Reveal } from '@/components/motion/reveal';
 import { ContactHero } from '@/features/contact/contact-hero';
 import { ContactDetails } from '@/features/contact/contact-details';
@@ -7,6 +9,11 @@ import { ContactCta } from '@/features/contact/contact-cta';
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale, 'contact');
+}
 
 // Page Contact — coordonnées pratiques + CTA. Formulaire différé (pas de backend).
 // Motion : Reveal sur les blocs sous le hero (le hero reste intact pour le LCP).

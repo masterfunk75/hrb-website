@@ -5,6 +5,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { SITE_URL } from '@/config/site';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import '../globals.css';
@@ -28,10 +29,35 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: 'Boulogne Résidence Hôtel',
-  description: 'Appart-hôtel 3* à Boulogne-Billancourt.',
-};
+// Métadonnées de base, partagées par toutes les pages localisées :
+// - metadataBase : résout les URLs relatives (OG, canonical) en absolu ;
+// - title.template : suffixe « · Boulogne Résidence Hôtel » sur chaque page
+//   (les pages fournissent leur titre court ; l'accueil pose un titre absolu) ;
+// - openGraph / robots : valeurs par défaut, surchargées au besoin par page.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Meta' });
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: t('homeTitle'),
+      template: `%s · ${t('siteName')}`,
+    },
+    description: t('homeDescription'),
+    applicationName: t('siteName'),
+    openGraph: {
+      siteName: t('siteName'),
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
+      type: 'website',
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 // Pré-génère les pages pour chaque langue (rendu statique).
 export function generateStaticParams() {

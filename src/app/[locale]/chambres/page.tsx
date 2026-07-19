@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/features/seo/page-metadata';
 import { PhotoBand } from '@/components/ui/photo-band';
 import { Reveal } from '@/components/motion/reveal';
 import { RoomsHero } from '@/features/rooms/rooms-hero';
@@ -13,6 +15,11 @@ import { RoomsCta } from '@/features/rooms/rooms-cta';
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale, 'rooms');
+}
 
 // Page Chambres & studios — assemblée section par section (source : lot-3 chambres v1).
 // Motion : Reveal sur les blocs texte/table/CTA ; les grilles de cartes (amenities,

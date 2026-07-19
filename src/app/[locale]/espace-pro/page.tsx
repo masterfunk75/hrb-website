@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { pageMetadata } from '@/features/seo/page-metadata';
 import { PhotoBand } from '@/components/ui/photo-band';
 import { Reveal } from '@/components/motion/reveal';
 import { BusinessHero } from '@/features/espace-pro/business-hero';
@@ -15,6 +17,11 @@ import { BusinessFinalCta } from '@/features/espace-pro/business-final-cta';
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  return pageMetadata(locale, 'business');
+}
 
 // Page Espace Pro / Corporate — assemblée section par section (source : lot-2 corpo v2).
 // Motion : Reveal sur les blocs texte/bandeau/carte/FAQ ; les grilles (avantages,

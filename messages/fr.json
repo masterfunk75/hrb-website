@@ -1,4 +1,21 @@
 {
+  "Meta": {
+    "siteName": "Boulogne Résidence Hôtel",
+    "homeTitle": "Boulogne Résidence Hôtel — Appart-hôtel à Boulogne-Billancourt",
+    "homeDescription": "22 chambres et studios à 5 minutes du métro Marcel Sembat. Séjours d'une nuit à plusieurs mois, réservés en direct au meilleur tarif.",
+    "roomsTitle": "Chambres & studios",
+    "roomsDescription": "Huit catégories de chambres et studios climatisés, avec kitchenette, coffre-fort et Wi-Fi. Le logement adapté à votre séjour à Boulogne.",
+    "neighborhoodTitle": "Le quartier",
+    "neighborhoodDescription": "Vivre à Boulogne-Billancourt : métro ligne 9, Bois de Boulogne, Roland-Garros, Parc des Princes, la Seine Musicale. Tout ce qu'il y a autour.",
+    "businessTitle": "Espace pro & longue durée",
+    "businessDescription": "Chambres business et studios longue durée pour vos déplacements : facture mensuelle, réception francophone et anglophone, accès 24/7.",
+    "directTitle": "Réserver en direct",
+    "directDescription": "Réservez en direct au meilleur tarif : attention personnalisée, flexibilité et zéro intermédiaire.",
+    "aboutTitle": "À propos",
+    "aboutDescription": "Un appart-hôtel indépendant à Boulogne-Billancourt : notre adresse, notre approche et nos engagements.",
+    "contactTitle": "Contact",
+    "contactDescription": "Adresse, téléphone et horaires de la réception du Boulogne Résidence Hôtel, à Boulogne-Billancourt."
+  },
   "Nav": {
     "home": "Accueil",
     "rooms": "Chambres",

@@ -1,4 +1,21 @@
 {
+  "Meta": {
+    "siteName": "Boulogne Résidence Hôtel",
+    "homeTitle": "Boulogne Résidence Hôtel — Aparthotel in Boulogne-Billancourt",
+    "homeDescription": "22 rooms and studios 5 minutes from Marcel Sembat metro. Stays from one night to several months, booked direct at the best rate.",
+    "roomsTitle": "Rooms & studios",
+    "roomsDescription": "Eight categories of air-conditioned rooms and studios with kitchenette, safe and Wi-Fi. The right space for your stay in Boulogne.",
+    "neighborhoodTitle": "The neighbourhood",
+    "neighborhoodDescription": "Living in Boulogne-Billancourt: metro line 9, Bois de Boulogne, Roland-Garros, Parc des Princes, la Seine Musicale. Everything nearby.",
+    "businessTitle": "Business & long stays",
+    "businessDescription": "Business rooms and long-stay studios for work trips: monthly invoicing, English-speaking front desk, 24/7 access.",
+    "directTitle": "Book direct",
+    "directDescription": "Book direct at the best rate: personal attention, flexibility and no middleman.",
+    "aboutTitle": "About",
+    "aboutDescription": "An independent aparthotel in Boulogne-Billancourt: our address, our approach and our commitments.",
+    "contactTitle": "Contact",
+    "contactDescription": "Address, phone and reception hours for Boulogne Résidence Hôtel in Boulogne-Billancourt."
+  },
   "Nav": {
     "home": "Home",
     "rooms": "Rooms",
