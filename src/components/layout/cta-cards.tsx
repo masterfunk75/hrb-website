@@ -50,7 +50,9 @@ export function CtaCards({
         {cards.map((card) => (
           <StaggerItem key={card.title} className="h-full">
             <Card
-              className={`h-full${card.accent ? 'border-primary border-2' : ''}`}
+              className={
+                card.accent ? 'border-primary h-full border-2' : 'h-full'
+              }
             >
               <h3 className="font-display text-primary text-xl">
                 {card.title}
