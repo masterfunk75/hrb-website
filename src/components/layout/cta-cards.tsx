@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Section } from '@/components/ui/section';
 import { Card } from '@/components/ui/card';
 import { Button, type ButtonVariant } from '@/components/ui/button';
+import { Stagger, StaggerItem } from '@/components/motion/stagger';
 
 // Une carte d'invitation : titre, corps, et un CTA (bouton) ancré en bas.
 // `accent` met une carte en avant (bordure primaire) — ex. l'option « Réserver ».
@@ -29,6 +30,8 @@ type CtaCardsProps = {
 // Bloc « CTA final » : une grille de cartes d'invitation (md:grid-cols-3),
 // chacune avec un bouton ancré en bas. Factorisé depuis les pages À propos et
 // Espace pro qui partageaient un markup identique (#17).
+// Les cartes apparaissent en cascade au scroll ; pas de lift sur la carte
+// (le bouton porte déjà l'affordance d'action — hover + press).
 export function CtaCards({
   cards,
   eyebrow,
@@ -43,22 +46,25 @@ export function CtaCards({
       intro={intro}
       className={className}
     >
-      <div className="grid gap-6 md:grid-cols-3">
+      <Stagger className="grid gap-6 md:grid-cols-3">
         {cards.map((card) => (
-          <Card
-            key={card.title}
-            className={card.accent ? 'border-primary border-2' : undefined}
-          >
-            <h3 className="font-display text-primary text-xl">{card.title}</h3>
-            <p className="text-muted text-sm">{card.body}</p>
-            <div className="mt-auto pt-4">
-              <Button href={card.href} variant={card.variant}>
-                {card.cta}
-              </Button>
-            </div>
-          </Card>
+          <StaggerItem key={card.title} className="h-full">
+            <Card
+              className={`h-full${card.accent ? 'border-primary border-2' : ''}`}
+            >
+              <h3 className="font-display text-primary text-xl">
+                {card.title}
+              </h3>
+              <p className="text-muted text-sm">{card.body}</p>
+              <div className="mt-auto pt-4">
+                <Button href={card.href} variant={card.variant}>
+                  {card.cta}
+                </Button>
+              </div>
+            </Card>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </Section>
   );
 }
