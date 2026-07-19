@@ -1,10 +1,11 @@
 import { useTranslations } from 'next-intl';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { PhotoPlaceholder } from '@/components/ui/photo-placeholder';
+import { Photo } from '@/components/ui/photo';
 import { BOOKING_HREF } from '@/config/site';
+import { photoSrc } from '@/config/photos';
 
-// Hero de la page d'accueil. Photo en placeholder (pipeline photo en attente).
+// Hero de la page d'accueil. Photo LCP (priority) — Studio Supérieur (acc_hero).
 export function Hero() {
   const t = useTranslations('Home');
   const tNav = useTranslations('Nav');
@@ -24,9 +25,12 @@ export function Hero() {
             </Button>
           </div>
         </div>
-        <PhotoPlaceholder
+        <Photo
+          src={photoSrc('accHero')}
+          alt={t('heroPhotoAlt')}
           ratioClass="aspect-[4/5] md:aspect-[16/9]"
-          label="Hero — Studio Supérieur (acc_hero · BRH_148)"
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
       </Container>
     </section>
