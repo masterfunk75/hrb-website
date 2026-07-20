@@ -36,11 +36,13 @@ export function dedgeBigCalendarSrc(locale: string): string {
   return `https://widgets.secure-hotel-booking.com/${DEDGE.hotelSlug}/${DEDGE.hotelCode}/${DEDGE.hotelId}/${dedgeLang(locale)}/BigCalendar/`;
 }
 
-// URL canonique du site, SANS slash final. ⚠️ [à confirmer] : domaine réel non
-// arrêté. Surchargeable au build via NEXT_PUBLIC_SITE_URL (ex. sur Vercel).
-// Sert de base aux métadonnées SEO, au sitemap et au robots.
+// URL canonique du site, SANS slash final. Domaine réel de l'ancien site Wix
+// (conservé pour préserver le référencement) : www.boulogneresidencehotel.com.
+// `www` retenu comme hôte canonique car c'est celui des URL historiquement
+// indexées. Surchargeable au build via NEXT_PUBLIC_SITE_URL (à définir sur
+// Vercel, identique). Sert de base aux métadonnées SEO, au sitemap et au robots.
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://boulogne-residence-hotel.fr'
+  process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.boulogneresidencehotel.com'
 ).replace(/\/+$/, '');
 
 // Chemins des pages principales (sans préfixe de langue) — source unique
