@@ -1,0 +1,21 @@
+# Configuration de déploiement Netlify — Boulogne Résidence Hôtel (Next.js 16).
+# Netlify détecte Next.js et applique son adaptateur (OpenNext) : SSR, middleware
+# (nos redirections SEO tournent en Edge Functions), i18n et optimisation d'images
+# fonctionnent sans réglage supplémentaire. La commande de build et le dossier de
+# sortie sont gérés automatiquement par l'adaptateur.
+
+[build]
+  command = "npm run build"
+
+[build.environment]
+  # Épingle Node 24 (comme .nvmrc et engines.node) pour un build reproductible.
+  NODE_VERSION = "24"
+  # Domaine canonique réel — base du sitemap, des URL canoniques et de l'Open Graph.
+  # (Identique au défaut de config/site.ts ; explicite ici pour l'intention.)
+  NEXT_PUBLIC_SITE_URL = "https://www.boulogneresidencehotel.com"
+
+# Adaptateur officiel Next.js de Netlify. Volontairement NON épinglé en version :
+# Netlify le maintient à jour pour toutes les versions de Next (recommandation
+# officielle). Ne PAS l'ajouter à package.json.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
