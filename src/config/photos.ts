@@ -12,10 +12,10 @@ export const PHOTOS = {
   chambresHero: 'BRH_089.webp',
   quartierHero: 'BRH_152.webp',
   directHero: 'BRH_139.webp',
-  aproposHero: 'BRH_149.webp',
+  aproposHero: 'apropos-hero.jpg', // BRH_149 redressé (source pivotée 90°)
   // Bandeaux pleine largeur
-  chambresBand: 'BRH_004.webp',
-  quartierBand: 'BRH_017.webp',
+  chambresBand: 'chambres-band.jpg', // BRH_027 (studio) — remplace BRH_004 (détail lampe inadapté au bandeau)
+  quartierBand: 'quartier-band.jpg', // BRH_017 redressé + recadré 3:1 (source pivotée 90°)
   // Logements (teaser accueil + catégories page Chambres)
   studioSuperieur: 'studio-superieur.jpg', // HOTERA
   chambreStandard: 'chambre-standard.jpg', // HOTERA
@@ -26,15 +26,15 @@ export const PHOTOS = {
   chambreAffaires: 'chambre-affaire.jpg', // HOTERA
   studioStandard: 'BRH_001.webp', // conservé (pas de nouvelle photo)
   // Espace pro
-  proMissionCourte: 'BRH_066.webp',
-  proSejourLong: 'BRH_102.webp',
+  proMissionCourte: 'pro-mission-courte.jpg', // BRH_066 redressé (source pivotée 90°)
+  proSejourLong: 'pro-sejour-long.jpg', // BRH_102 redressé (source pivotée 90°)
   // À propos
-  aproposEquipe: 'BRH_076.webp',
+  aproposEquipe: 'apropos-equipe.jpg', // BRH_076 redressé (source pivotée 90°)
   // Ambiance — emplacements sans photo dédiée dans le livrable
-  lifestyle: 'BRH_073.webp',
-  espacesCommuns: 'BRH_016.webp',
+  lifestyle: 'lifestyle.jpg', // BRH_073 redressé (source pivotée 90°)
+  espacesCommuns: 'espaces-communs.jpg', // BRH_016 redressé (source pivotée 90°)
   petitDejeuner: 'petit-dejeuner.jpg', // HOTERA — bandeau petit-déjeuner
-  quartierExterieur: 'BRH_150.webp',
+  quartierExterieur: 'quartier-exterieur.jpg', // BRH_150 redressé (source pivotée 90°)
 } as const;
 
 export type PhotoKey = keyof typeof PHOTOS;
