@@ -6,7 +6,9 @@
 
 export const PHOTOS = {
   // Héros
-  accHero: 'studio-superieur.jpg', // HOTERA — Studio Supérieur (hero accueil)
+  // Panorama de Paris (toits + Tour Eiffel au loin) — Unsplash, licence
+  // commerciale gratuite sans attribution requise (photo : Christel F.).
+  accHero: 'paris-hero.jpg',
   chambresHero: 'BRH_089.webp',
   quartierHero: 'BRH_152.webp',
   directHero: 'BRH_139.webp',
