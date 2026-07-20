@@ -33,7 +33,7 @@ export default async function QuartierPage({ params }: Props) {
       <Reveal>
         <LivingInBoulogne />
       </Reveal>
-      <WhatsAround locale={locale} />
+      <WhatsAround />
       <Reveal>
         <BreathingBand />
       </Reveal>
