@@ -85,7 +85,7 @@ export const roomCategoriesFr: RoomCategory[] = [
       { label: 'Étages', value: '1ᵉʳ à 3ᵉ' },
       { label: 'Vue', value: 'Rue' },
     ],
-    photoLabel: 'Chambre Twin · BRH_048',
+    photoLabel: 'Chambre Twin · chambre-twin',
   },
   {
     id: 'studio-standard',

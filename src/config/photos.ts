@@ -20,7 +20,7 @@ export const PHOTOS = {
   studioSuperieur: 'studio-superieur.jpg', // HOTERA
   chambreStandard: 'chambre-standard.jpg', // HOTERA
   studioClassique: 'BRH_008.webp', // conservé (meilleure que la nouvelle)
-  chambreTwin: 'BRH_048.webp', // conservé (pas de nouvelle photo)
+  chambreTwin: 'chambre-twin.jpg', // BRH_048 recadré + redressé (source pivotée 90°)
   chambreConfort: 'chambre-confort.jpg', // HOTERA
   chambreDouble: 'chambre-double.jpg', // HOTERA
   chambreAffaires: 'chambre-affaire.jpg', // HOTERA
