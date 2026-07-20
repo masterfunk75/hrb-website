@@ -137,4 +137,96 @@ export const legalEn: Record<LegalKey, LegalDoc> = {
       },
     ],
   },
+
+  cgv: {
+    updated: '20 July 2026',
+    intro:
+      'These terms of sale ("Terms") govern stays booked directly with [company name — to confirm], operator of the Boulogne Résidence Hôtel apart-hotel (the "hotel"), whether via the site, by phone or on site. Any booking implies unreserved acceptance of these Terms.',
+    sections: [
+      {
+        heading: 'Purpose',
+        paragraphs: [
+          'These Terms set out the rights and obligations of the parties for the booking of accommodation (rooms and studios) offered by the hotel. They apply to any direct booking and prevail over any other document, subject to the particular conditions accepted at the time of booking.',
+        ],
+      },
+      {
+        heading: 'Booking',
+        paragraphs: [
+          'Bookings are made via the hotel’s secure booking engine, by phone on +33 1 49 10 05 45, or on site. A booking is firm only once a confirmation has been sent by email, summarising the stay dates, the accommodation category and the amount.',
+          'The guest warrants the accuracy of the information provided at the time of booking.',
+        ],
+      },
+      {
+        heading: 'Rates',
+        paragraphs: [
+          'Rates are shown in euros, all taxes included, [per accommodation and per night — to confirm]. The tourist tax [is charged in addition, per the applicable scale — to confirm].',
+          'The rates that apply are those in force at the time of booking. The hotel reserves the right to change them at any time, without affecting bookings already confirmed.',
+        ],
+      },
+      {
+        heading: 'Payment',
+        paragraphs: [
+          'Payment terms are specified at the time of booking: [card guarantee, deposit or payment of all or part of the stay — to confirm], with the balance paid [on arrival or on departure — to confirm]. Accepted means of payment are [to confirm].',
+          'Card payments made through the booking engine are secured by the payment provider.',
+        ],
+      },
+      {
+        heading: 'Cancellation and amendment',
+        paragraphs: [
+          'Cancellation and amendment conditions depend on the rate chosen and are shown at the time of booking and on the confirmation. Unless otherwise stated: [applicable deadlines and fees — to confirm].',
+          'Some promotional rates may be non-amendable and non-refundable; this is indicated before the booking is validated.',
+        ],
+      },
+      {
+        heading: 'No-show',
+        paragraphs: [
+          'If the guest fails to arrive on the scheduled arrival date without prior cancellation, [the first night or the entire stay — to confirm] may be charged and the booking cancelled.',
+        ],
+      },
+      {
+        heading: 'Right of withdrawal',
+        paragraphs: [
+          'In accordance with Article L221-28, 12° of the French Consumer Code, the right of withdrawal does not apply to accommodation services provided on a specified date. Bookings are therefore governed by the cancellation conditions above, and not by a fourteen-day withdrawal period.',
+        ],
+      },
+      {
+        heading: 'Arrival and departure',
+        paragraphs: [
+          'Check-in is from [time — to confirm] and check-out is by [time — to confirm] at the latest. Any late arrival or early departure must be notified to the hotel and does not give rise to a refund.',
+        ],
+      },
+      {
+        heading: 'Stay and house rules',
+        paragraphs: [
+          'The accommodation is made available for the number of people stated at the time of booking; its capacity may not be exceeded. [Conditions regarding pets, smoking and noise — to confirm.]',
+          'The guest undertakes to use the accommodation peacefully and to comply with the hotel’s house rules.',
+        ],
+      },
+      {
+        heading: 'Liability',
+        paragraphs: [
+          'The hotel cannot be held liable for non-performance due to force majeure or the act of a third party. Its liability is limited as provided for by law.',
+        ],
+      },
+      {
+        heading: 'Complaints and mediation',
+        paragraphs: [
+          'Any complaint about the stay must be sent to the hotel at [email — to confirm] as soon as possible.',
+          'In accordance with Articles L611-1 et seq. of the French Consumer Code, the guest may use a consumer mediator free of charge to seek the amicable resolution of a dispute: [mediator name and contact details — to confirm].',
+        ],
+      },
+      {
+        heading: 'Personal data',
+        paragraphs: [
+          'Data collected at the time of booking is processed in accordance with the hotel’s Privacy Policy, available on the site.',
+        ],
+      },
+      {
+        heading: 'Governing law and disputes',
+        paragraphs: [
+          'These Terms are governed by French law. In the event of a dispute, and after an attempt at amicable resolution or mediation, the French courts have jurisdiction.',
+        ],
+      },
+    ],
+  },
 };

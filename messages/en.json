@@ -20,7 +20,9 @@
     "confidentialiteTitle": "Privacy policy",
     "confidentialiteDescription": "How your personal data is processed on the Boulogne Résidence Hôtel website (GDPR).",
     "cookiesTitle": "Cookies",
-    "cookiesDescription": "The cookies used by the Boulogne Résidence Hôtel website and how to manage them."
+    "cookiesDescription": "The cookies used by the Boulogne Résidence Hôtel website and how to manage them.",
+    "cgvTitle": "Terms of Sale",
+    "cgvDescription": "The booking, payment and cancellation terms for stays at the Boulogne Résidence Hôtel."
   },
   "Legal": {
     "eyebrow": "Legal information",
@@ -45,7 +47,8 @@
     "skipToContent": "Skip to content",
     "legalNotice": "Legal notice",
     "privacy": "Privacy",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "terms": "Terms of sale"
   },
   "Footer": {
     "tagline": "Aparthotel in Boulogne-Billancourt. A few nights or several months.",

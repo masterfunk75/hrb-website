@@ -58,6 +58,7 @@ export const PAGE_PATHS = {
   mentionsLegales: '/mentions-legales',
   confidentialite: '/confidentialite',
   cookies: '/cookies',
+  cgv: '/cgv',
 } as const;
 
 export type PageKey = keyof typeof PAGE_PATHS;

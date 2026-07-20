@@ -65,10 +65,9 @@ export const LEGACY_REDIRECTS: Record<string, string> = {
   '/politiques': '/fr/confidentialite', // [arbitrage] index de politiques
   '/politique-en-matiere-de-cookies': '/fr/cookies',
   '/politique-en-matière-de-cookies': '/fr/cookies',
-  // Le nouveau site n'a pas (encore) de page CGV → repli sur mentions légales.
-  '/conditions-generales': '/fr/mentions-legales',
-  '/conditions-generale-de-vente': '/fr/mentions-legales',
-  '/conditions-d-utilisation': '/fr/mentions-legales',
+  '/conditions-generales': '/fr/cgv',
+  '/conditions-generale-de-vente': '/fr/cgv',
+  '/conditions-d-utilisation': '/fr/cgv',
 };
 
 // Résout un chemin entrant vers sa cible de redirection, ou null si aucune.

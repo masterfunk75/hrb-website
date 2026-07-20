@@ -13,5 +13,9 @@ export type LegalDoc = {
   sections: LegalSection[];
 };
 
-// Clés des documents = clés de PAGE_PATHS pour les 3 pages légales.
-export type LegalKey = 'mentionsLegales' | 'confidentialite' | 'cookies';
+// Clés des documents = clés de PAGE_PATHS pour les pages légales.
+export type LegalKey =
+  | 'mentionsLegales'
+  | 'confidentialite'
+  | 'cookies'
+  | 'cgv';

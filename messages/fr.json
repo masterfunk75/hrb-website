@@ -20,7 +20,9 @@
     "confidentialiteTitle": "Politique de confidentialité",
     "confidentialiteDescription": "Comment vos données personnelles sont traitées sur le site Boulogne Résidence Hôtel (RGPD).",
     "cookiesTitle": "Cookies",
-    "cookiesDescription": "Les cookies utilisés par le site Boulogne Résidence Hôtel et comment les gérer."
+    "cookiesDescription": "Les cookies utilisés par le site Boulogne Résidence Hôtel et comment les gérer.",
+    "cgvTitle": "Conditions générales de vente",
+    "cgvDescription": "Les conditions de réservation, de paiement et d’annulation des séjours au Boulogne Résidence Hôtel."
   },
   "Legal": {
     "eyebrow": "Informations légales",
@@ -45,7 +47,8 @@
     "skipToContent": "Aller au contenu",
     "legalNotice": "Mentions légales",
     "privacy": "Confidentialité",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "terms": "Conditions de vente"
   },
   "Footer": {
     "tagline": "Appart-hôtel à Boulogne-Billancourt. Quelques nuits ou plusieurs mois.",

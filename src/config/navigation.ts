@@ -27,4 +27,5 @@ export const legalNav: NavItem[] = [
   { href: '/mentions-legales', labelKey: 'legalNotice' },
   { href: '/confidentialite', labelKey: 'privacy' },
   { href: '/cookies', labelKey: 'cookies' },
+  { href: '/cgv', labelKey: 'terms' },
 ];

@@ -109,7 +109,12 @@ describe('intégrité des données', () => {
 });
 
 describe('documents légaux — parité et intégrité', () => {
-  const keys: LegalKey[] = ['mentionsLegales', 'confidentialite', 'cookies'];
+  const keys: LegalKey[] = [
+    'mentionsLegales',
+    'confidentialite',
+    'cookies',
+    'cgv',
+  ];
 
   for (const key of keys) {
     it(`${key} : même nombre de sections en FR et EN`, () => {
