@@ -1,0 +1,44 @@
+# CI — vérifie la qualité du code à chaque PR et à chaque push sur `main`.
+# Mêmes gates que le hook pre-commit (lint + types + tests), plus le build de prod.
+# Tourne sur un runner propre en Node 24 → pas de dépendance à l'environnement local.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Annule un run en cours si un nouveau commit arrive sur la même branche/PR.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Lint · Types · Tests · Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node (lit .nvmrc = 24)
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install (npm ci — respecte package-lock)
+        run: npm ci
+
+      - name: Lint (ESLint + boundaries)
+        run: npm run lint
+
+      - name: Typecheck (tsc --noEmit)
+        run: npm run typecheck
+
+      - name: Tests (vitest)
+        run: npm test
+
+      - name: Build de production (next build)
+        run: npm run build
