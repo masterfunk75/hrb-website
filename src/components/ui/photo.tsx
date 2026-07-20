@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 type PhotoProps = {
-  /** Chemin public, ex. "/photos/BRH_148.webp" (voir config/photos). */
+  /** Chemin public, ex. "/photos/studio-superieur.jpg" (voir config/photos). */
   src: string;
   /** Texte alternatif descriptif (accessibilité + SEO). */
   alt: string;

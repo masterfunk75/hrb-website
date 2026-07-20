@@ -1,44 +1,45 @@
-// Correspondance emplacement du site → fichier photo (public/photos/*.webp).
-// Source : livrable photo professionnel (metadata/par-emplacement.json), en
-// retenant la photo « essentielle » recommandée pour chaque rôle.
-// Résolution source 2560 px ; next/image sert des versions optimisées.
+// Correspondance emplacement du site → fichier photo (dans public/photos/).
+// Deux sources : livrable pro « BRH_* » (WebP 2560px) et nouvelles photos
+// « HOTERA » (JPEG 2000px, sélectionnées par analyse). next/image sert des
+// versions optimisées (WebP) quelle que soit la source.
+// La valeur inclut l'extension (les sources n'ont pas toutes le même format).
 
 export const PHOTOS = {
   // Héros
-  accHero: 'BRH_148',
-  chambresHero: 'BRH_089',
-  quartierHero: 'BRH_152',
-  directHero: 'BRH_139',
-  aproposHero: 'BRH_149',
+  accHero: 'studio-superieur.jpg', // HOTERA — Studio Supérieur (hero accueil)
+  chambresHero: 'BRH_089.webp',
+  quartierHero: 'BRH_152.webp',
+  directHero: 'BRH_139.webp',
+  aproposHero: 'BRH_149.webp',
   // Bandeaux pleine largeur
-  chambresBand: 'BRH_004',
-  quartierBand: 'BRH_017',
+  chambresBand: 'BRH_004.webp',
+  quartierBand: 'BRH_017.webp',
   // Logements (teaser accueil + catégories page Chambres)
-  studioSuperieur: 'BRH_071',
-  chambreStandard: 'BRH_021',
-  studioClassique: 'BRH_008',
-  chambreTwin: 'BRH_048',
-  chambreConfort: 'BRH_081',
-  chambreDouble: 'BRH_079',
-  chambreAffaires: 'BRH_032',
-  studioStandard: 'BRH_001',
+  studioSuperieur: 'studio-superieur.jpg', // HOTERA
+  chambreStandard: 'chambre-standard.jpg', // HOTERA
+  studioClassique: 'BRH_008.webp', // conservé (meilleure que la nouvelle)
+  chambreTwin: 'BRH_048.webp', // conservé (pas de nouvelle photo)
+  chambreConfort: 'chambre-confort.jpg', // HOTERA
+  chambreDouble: 'chambre-double.jpg', // HOTERA
+  chambreAffaires: 'chambre-affaire.jpg', // HOTERA
+  studioStandard: 'BRH_001.webp', // conservé (pas de nouvelle photo)
   // Espace pro
-  proMissionCourte: 'BRH_066',
-  proSejourLong: 'BRH_102',
+  proMissionCourte: 'BRH_066.webp',
+  proSejourLong: 'BRH_102.webp',
   // À propos
-  aproposEquipe: 'BRH_076',
+  aproposEquipe: 'BRH_076.webp',
   // Ambiance — emplacements sans photo dédiée dans le livrable
-  lifestyle: 'BRH_073',
-  espacesCommuns: 'BRH_016',
-  petitDejeuner: 'BRH_118',
-  quartierExterieur: 'BRH_150',
+  lifestyle: 'BRH_073.webp',
+  espacesCommuns: 'BRH_016.webp',
+  petitDejeuner: 'petit-dejeuner.jpg', // HOTERA — bandeau petit-déjeuner
+  quartierExterieur: 'BRH_150.webp',
 } as const;
 
 export type PhotoKey = keyof typeof PHOTOS;
 
 // Chemin public d'une photo (servie et optimisée par next/image).
 export function photoSrc(key: PhotoKey): string {
-  return `/photos/${PHOTOS[key]}.webp`;
+  return `/photos/${PHOTOS[key]}`;
 }
 
 // Photo par catégorie de logement : id du contenu → emplacement photo.
