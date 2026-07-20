@@ -6,7 +6,9 @@ import { Hero } from '@/features/home/hero';
 import { Booking } from '@/features/home/booking';
 import { WhyUs } from '@/features/home/why-us';
 import { HomePersonas } from '@/features/home/personas';
+import { Reviews } from '@/features/home/reviews';
 import { Rooms } from '@/features/home/rooms';
+import { EventsCalendar } from '@/features/home/events-calendar';
 import { BookDirect } from '@/features/home/book-direct';
 
 type Props = {
@@ -34,7 +36,11 @@ export default async function HomePage({ params }: Props) {
           mécanique d'animation par élément, sans double fondu. */}
       <WhyUs />
       <HomePersonas />
+      <Reveal>
+        <Reviews locale={locale} />
+      </Reveal>
       <Rooms />
+      <EventsCalendar locale={locale} />
       <Reveal>
         <BookDirect />
       </Reveal>
