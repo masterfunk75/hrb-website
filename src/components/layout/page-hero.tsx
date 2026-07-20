@@ -24,7 +24,9 @@ export function PageHero({
   subtitle,
   photoSrc,
   photoAlt,
-  photoRatio = '4/5',
+  // Cadre paysage : les photos de chambre sont en ~3:2 ; un cadre portrait 4/5
+  // les rognait de ~45 % (rendu « serré »). 4/3 les affiche quasi entières.
+  photoRatio = '4/3',
   photoPriority = false,
   children,
 }: PageHeroProps) {

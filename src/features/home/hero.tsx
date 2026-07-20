@@ -28,7 +28,7 @@ export function Hero() {
         <Photo
           src={photoSrc('accHero')}
           alt={t('heroPhotoAlt')}
-          ratioClass="aspect-[4/5] md:aspect-[16/9]"
+          ratioClass="aspect-[4/3] md:aspect-[16/9]"
           priority
           sizes="(max-width: 768px) 100vw, 50vw"
         />
